@@ -1,0 +1,35 @@
+<BFTypedBinder binderType="GeckoDwarf_Young_F">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Reptilia>
+						<Squamata>
+							<Gekkonidae>
+								<GeckoDwarf>
+									<GeckoDwarf_Young>
+										<GeckoDwarf_Young_F/>
+									</GeckoDwarf_Young>
+								</GeckoDwarf>
+							</Gekkonidae>
+						</Squamata>
+					</Reptilia>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\units\animals\GeckoDwarf\GeckoDwarf_Adult_F_icon.dds"/>
+         </UIAspect>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="GeckoDwarf_Young_F"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Male="0"/>
+   </shared>
+</BFTypedBinder>

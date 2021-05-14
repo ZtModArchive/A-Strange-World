@@ -1,0 +1,2874 @@
+<BehaviorSets>
+	<Default_Happy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Pos_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalHappy" priority="0" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="90" />
+					<DefaultHappy weight="3" />
+					<DefaultSniff weight="3" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Happy>
+	<Default_VeryHappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="DPos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryHappy" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="80" />
+					<DefaultHappy weight="6" />
+					<DefaultSniff weight="6" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryHappy>
+	<Default_Happy_inWater>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Pos_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalHappy" priority="0" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="90" />
+					<Default_inWater_Happy weight="3" />
+					<DefaultSniff weight="3" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Happy_inWater>
+	<Default_VeryHappy_inWater>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="DPos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryHappy" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="80" />
+					<Default_inWater_Happy weight="6" />
+					<DefaultSniff weight="6" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryHappy_inWater>
+	<Default_Happy_isSwimming>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Pos_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalHappy" priority="0" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultTreadWater weight="90" />
+					<Default_isSwimming_Happy weight="10" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Happy_isSwimming>
+	<Default_VeryHappy_isSwimming>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Pos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryHappy" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultTreadWater weight="80" />
+					<Default_isSwimming_Happy weight="20" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryHappy_isSwimming>
+	<Default_Unhappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalUnhappy" priority="-1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="90" />
+					<DefaultUnhappy weight="10" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Unhappy>
+	<Default_VeryUnhappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="80" />
+					<DefaultUnhappy weight="20" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryUnhappy>
+	<Default_Unhappy_inWater>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalUnhappy" priority="-1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="90" />
+					<Default_inWater_Unhappy weight="10" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Unhappy_inWater>
+	<Default_VeryUnhappy_inWater>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultStand weight="80" />
+					<Default_inWater_Unhappy weight="20" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryUnhappy_inWater>
+	<Default_Unhappy_isSwimming>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalUnhappy" priority="-1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultTreadWater weight="90" />
+					<Default_isSwimming_Unhappy weight="10" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_Unhappy_isSwimming>
+	<Default_VeryUnhappy_isSwimming>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehViewEvent viewKey="Neg_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalVeryUnhappy" priority="2" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehRandomSet>
+				<randomSets>
+					<DefaultTreadWater weight="80" />
+					<Default_isSwimming_Unhappy weight="20" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Default_VeryUnhappy_isSwimming>
+	<DefaultStand>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Standing" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</DefaultStand>
+	<DefaultLie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LyingDown" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Lie_Idle" />
+		</behaviors>
+	</DefaultLie>
+	<DefaultTreadWater>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:TreadingWater" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</DefaultTreadWater>
+	<DefaultSniff>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Sniffing" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+			<BFBehSetAttribute>
+				<BFAISubjecttData stimulation="-5" />
+			</BFBehSetAttribute>
+		</behaviors>
+	</DefaultSniff>
+	<DefaultHappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Wander" />
+			<BFBehSetAttribute>
+				<BFAISubjecttData exercise="-10" />
+			</BFBehSetAttribute>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</DefaultHappy>
+	<Default_inWater_Happy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Wander" />
+			<BFBehSetAttribute>
+				<BFAISubjecttData exercise="-10" />
+			</BFBehSetAttribute>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</Default_inWater_Happy>
+	<Default_isSwimming_Happy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Wander" />
+			<BFBehSetAttribute>
+				<BFAISubjecttData exercise="-10" />
+			</BFBehSetAttribute>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</Default_isSwimming_Happy>
+	<DefaultUnhappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GrowlAngry" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Growl" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAngry" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</DefaultUnhappy>
+	<Default_inWater_Unhappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GrowlAngry" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Growl" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAngry" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</Default_inWater_Unhappy>
+	<Default_isSwimming_Unhappy>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:PlayingWater" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Swim_Bite" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTEmoticonInfo emoticonName="EmoteAngry" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</Default_isSwimming_Unhappy>
+	<Wander>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Wandering" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehRandomSet>
+				<randomSets>
+					<Wander_Fast weight="25" />
+					<Wander_Med weight="25" />
+					<Wander_Slow weight="25" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Wander>
+	<Wander_Fast>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWander avoidEntityRadius="5" locoSpeed="fast" maxPlayTime="15" minPlayTime="7">
+				<avoidEntityTypes>
+					<entity />
+				</avoidEntityTypes>
+			</BFBehWander>
+		</behaviors>
+	</Wander_Fast>
+	<Wander_Med>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWander avoidEntityRadius="5" locoSpeed="medium" maxPlayTime="15" minPlayTime="7">
+				<avoidEntityTypes>
+					<entity />
+				</avoidEntityTypes>
+			</BFBehWander>
+		</behaviors>
+	</Wander_Med>
+	<Wander_Slow>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWander avoidEntityRadius="v" locoSpeed="slow" maxPlayTime="15" minPlayTime="7">
+				<avoidEntityTypes>
+					<entity />
+				</avoidEntityTypes>
+			</BFBehWander>
+		</behaviors>
+	</Wander_Slow>
+	<Idle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehLocoSwitchSet>
+				<behaviorTable>
+					<ground behSet="Ground_Idle" />
+					<water behSet="Water_Idle" />
+				</behaviorTable>
+			</BFBehLocoSwitchSet>
+		</behaviors>
+	</Idle>
+	<Think>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimSwitchSet loopFlag="true">
+				<behaviorTable>
+					<Stand behSet="Idle" />
+					<default behSet="Idle" />
+				</behaviorTable>
+			</BFBehAnimSwitchSet>
+		</behaviors>
+	</Think>
+	<LookAt>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<Idle weight="50" />
+					<Investigate weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</LookAt>
+	<Investigate>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLookAt" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockRadial subjectNode="Node_Mouth" targetRadius="3" />
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LookAt" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sniff" />
+		</behaviors>
+	</Investigate>
+	<InvestigateLarge>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLookAt" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove closestApproach="true" pathRadius="10" />
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LookAt" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sniff" />
+		</behaviors>
+	</InvestigateLarge>
+	<Die_OldAge>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Dying" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sleep" />
+			<ZTBehViewEvent viewKey="Neg_10">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalDiedBad" priority="-1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalDied" priority="-1" timeout="60" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehKill fadeOutPeriod="1" killSubject="true" />
+		</behaviors>
+	</Die_OldAge>
+	<Die_Sick>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Dying_Sick" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sleep" />
+			<ZTBehViewEvent viewKey="Neg_10">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalDiedSickBad" priority="-1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalDiedSick" priority="-1" timeout="60" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehKill fadeOutPeriod="1" killSubject="true" />
+		</behaviors>
+	</Die_Sick>
+	<Die_Fight>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehMorph NameIt="true" morphEntity="subject" morphTargetEntityType="Carcass_Meat" />
+		</behaviors>
+	</Die_Fight>
+	<Ground_Idle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimSwitchSet>
+				<behaviorTable>
+					<Stand behSet="DefaultStand" />
+					<Lie behSet="DefaultLie" />
+					<default behSet="DefaultLie" />
+				</behaviorTable>
+			</BFBehAnimSwitchSet>
+		</behaviors>
+	</Ground_Idle>
+	<Water_Idle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimSwitchSet>
+				<behaviorTable>
+					<Swim behSet="DefaultTreadWater" />
+					<TreadWater behSet="DefaultTreadWater" />
+					<default behSet="DefaultTreadWater" />
+				</behaviorTable>
+			</BFBehAnimSwitchSet>
+		</behaviors>
+	</Water_Idle>
+	<Stand>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</Stand>
+	<Poop>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehSpawn spawnEntity="Poop_Lizard" subjectNode="Poop" targetAnim="Stand_Poop" />
+		</behaviors>
+	</Poop>
+	<Poop_Sick>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehSpawn spawnEntity="Poop_Lizard_Sick" subjectNode="Poop" targetAnim="Stand_Poop" />
+		</behaviors>
+	</Poop_Sick>
+	<Pee>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Pee" />
+		</behaviors>
+	</Pee>
+	<Lie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Lie_Idle" />
+		</behaviors>
+	</Lie>
+	<Lie_Long>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate playTime="30" targetAnim="Lie_Idle" />
+		</behaviors>
+	</Lie_Long>
+	<Sniff>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Sniff" />
+		</behaviors>
+	</Sniff>
+	<Regurgitate>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RegurgitatingFlee" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehSpawn spawnEntity="Terrain_Meat" subjectNode="Node_Mouth" targetAnim="Stand_Regurgitate" />
+		</behaviors>
+	</Regurgitate>
+	<Sleep>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</Sleep>
+	<ThroatPuff>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Hiss" />
+		</behaviors>
+	</ThroatPuff>
+	<TongueTouch>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</TongueTouch>
+	<Lunge>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</Lunge>
+	<Bite_High>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</Bite_High>
+	<Bite_High_Whap>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWhap targetAnim="Stand_Eat" />
+		</behaviors>
+	</Bite_High_Whap>
+	<Bite>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</Bite>
+	<Bite_Whap>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWhap targetAnim="Stand_Eat" />
+		</behaviors>
+	</Bite_Whap>
+	<Stand_Bite>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimateRandom>
+				<randomAnims>
+					<Stand_BiteA weight="50" />
+					<Stand_BiteB weight="50" />
+				</randomAnims>
+			</BFBehAnimateRandom>
+		</behaviors>
+	</Stand_Bite>
+	<Swipe>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</Swipe>
+	<Swipe_Whap>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehWhap targetAnim="Stand_Eat" />
+		</behaviors>
+	</Swipe_Whap>
+	<Stand_Swipe>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimateRandom>
+				<randomAnims>
+					<Stand_SwipeA weight="50" />
+					<Stand_SwipeB weight="50" />
+				</randomAnims>
+			</BFBehAnimateRandom>
+		</behaviors>
+	</Stand_Swipe>
+	<FightDie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Lie_Idle" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Killed" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Idle" />
+			<BFBehKill fadeOutPeriod="1" killSubject="true" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalAttacked" priority="-1" timeout="60" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Die_Fight" />
+		</behaviors>
+	</FightDie>
+	<DefendEqual>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<Fight weight="50" />
+					<FightDie weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</DefendEqual>
+	<Fight>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Fighting" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+			<BFBehRandomSet>
+				<randomSets>
+					<Stand_Bite weight="50" />
+					<Stand_Swipe weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</Fight>
+	<MatingCall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Growl" />
+		</behaviors>
+	</MatingCall>
+	<DockFight>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToFight" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPursuit hitRadius="3" locoSpeed="fast" pollFreq="0.1" pursuitRadius="20" />
+			<BFBehDockNow redock="true" reserveSlotName="general" subjectNode="p_FightOffset" targetNode="p_FightOffset" />
+		</behaviors>
+	</DockFight>
+	<DockFight2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToFight" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPursuit hitRadius="3" locoSpeed="fast" pollFreq="0.1" pursuitRadius="20" />
+			<BFBehPlaySet behSet="LoopStand" />
+		</behaviors>
+	</DockFight2>
+	<FightSnap>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate interruptFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</FightSnap>
+	<WaitFight>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:WaitFight" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehLocoSwitchSet>
+				<behaviorTable>
+					<ground behSet="Stand_Idle" />
+					<water behSet="TreadWater_Idle" />
+				</behaviorTable>
+			</BFBehLocoSwitchSet>
+		</behaviors>
+	</WaitFight>
+	<Challenge>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:WaitFight" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="ThroatPuff" />
+		</behaviors>
+	</Challenge>
+	<HitFight>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<Idle weight="50" />
+					<HitDie weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</HitFight>
+	<HitDie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Killed" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Idle" />
+			<BFBehKill fadeOutPeriod="1" killSubject="true" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalAttacked" priority="-1" timeout="60" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</behaviors>
+	</HitDie>
+	<FailureSet>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehLocoSwitchSet>
+				<behaviorTable>
+					<ground behSet="Ground_Failure" />
+					<water behSet="Water_Failure" />
+				</behaviorTable>
+			</BFBehLocoSwitchSet>
+		</behaviors>
+	</FailureSet>
+	<Ground_Failure>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Growl" />
+		</behaviors>
+	</Ground_Failure>
+	<Water_Failure>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Idle" />
+		</behaviors>
+	</Water_Failure>
+	<Swim_Bite>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Walk_Ahead" />
+		</behaviors>
+	</Swim_Bite>
+	<TreadWater_Bite>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</TreadWater_Bite>
+	<EnterBall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="DockMouth" />
+		</behaviors>
+	</EnterBall>
+	<UseBall_Whap>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<Swipe_Whap weight="50" />
+					<Bite_Whap weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</UseBall_Whap>
+	<UseBall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<Swipe weight="50" />
+					<Bite weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</UseBall>
+	<ExitBall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitBall>
+	<Graze>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Eat" />
+		</behaviors>
+	</Graze>
+	<Eat>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate playTime="7" targetAnim="Stand_Eat" />
+		</behaviors>
+	</Eat>
+	<Drink>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate playTime="7" targetAnim="Stand_Eat" />
+		</behaviors>
+	</Drink>
+	<EnterFoodDish>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="DockMouth" />
+		</behaviors>
+	</EnterFoodDish>
+	<UseFoodDish>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Eat" />
+		</behaviors>
+	</UseFoodDish>
+	<DrinkFoodDish>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Drink" />
+		</behaviors>
+	</DrinkFoodDish>
+	<ExitFoodDish>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitFoodDish>
+	<Stand_Idle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate interruptFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</Stand_Idle>
+	<TreadWater_Idle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate interruptFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</TreadWater_Idle>
+	<WaitAttackGuest>
+		<subjects>
+			<caecilianchorla_Adult />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="LoopStand" />
+		</behaviors>
+	</WaitAttackGuest>
+	<AttackGuest>
+		<subjects>
+			<caecilianchorla_Adult />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate interruptFlag="true" targetAnim="Stand_Eat" />
+		</behaviors>
+	</AttackGuest>
+	<DockAttacked>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehScript context="behavior" file="scripts/playparticle.lua" function="playParticle" params="{Floor} runps PlacementCloud" />
+			<BFBehDockNow reserveSlotName="general" subjectNode="p_PreyOffset" targetNode="p_PredatorOffset" />
+		</behaviors>
+	</DockAttacked>
+	<Attacked>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_2Lie" />
+			<BFBehPlaySet behSet="Die_Fight" />
+		</behaviors>
+	</Attacked>
+	<Sick>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Growl" />
+		</behaviors>
+	</Sick>
+	<VerySick>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Lie_Long" />
+		</behaviors>
+	</VerySick>
+	<ChaseBall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToPlayWith" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockRadial locoSpeed="fast" subjectNode="p_PursuitBallNode" targetAnim="Stand_Idle" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:PlayingWith" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="UseBall_Whap" />
+			<ZTBehViewEvent viewKey="Pos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalPlayObjectGood" priority="2" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+		</behaviors>
+	</ChaseBall>
+	<Mate>
+		<subjects>
+			<caecilianchorla_Adult />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Mating" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="10" targetAnim="Lie_Idle" />
+		</behaviors>
+	</Mate>
+	<LayEgg>
+		<subjects>
+			<caecilianchorla_Adult_F />
+		</subjects>
+		<behaviors>
+			<BFBehSpawn fadeInPeriod="1" randomPosOffset="0" spawnEntity="caecilianchorla_Nest" spawnInTA="true" subjectNode="Floor" />
+			<BFBehRandomSet maxPlays="6" minPlays="3">
+				<randomSets>
+					<SpawnEgg weight="100" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</LayEgg>
+	<SpawnEgg>
+		<subjects>
+			<caecilianchorla_Adult_F />
+		</subjects>
+		<behaviors>
+			<BFBehSpawn fadeInPeriod="1" randomPosOffset="0" spawnEntity="caecilianchorla_Egg" spawnInTA="true" spawnRelation="child" subjectNode="Floor" />
+			<BFBehScript context="behavior" file="scripts/justgavebirth.lua" function="justgavebirth" />
+		</behaviors>
+	</SpawnEgg>
+	<HatchEgg>
+		<subjects>
+			<caecilianchorla_Egg />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate playTime="3" targetAnim="Stand_Idle" />
+			<BFBehRandomSet maxPlays="10" minPlays="2">
+				<randomSets>
+					<SpawnF weight="50" />
+					<SpawnM weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</HatchEgg>
+	<IdleEgg>
+		<subjects>
+			<caecilianchorla_Egg />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</IdleEgg>
+	<SpawnF>
+		<subjects>
+			<caecilianchorla_Egg />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Hatch_Idle" />
+			<ZTBehMorph morphEntity="caecilianchorla_Egg" morphPeriod="2" morphTargetEntityType="caecilianchorla_Young_F" />
+			<BFBehKill killSubject="true" />
+		</behaviors>
+	</SpawnF>
+	<SpawnM>
+		<subjects>
+			<caecilianchorla_Egg />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Hatch_Idle" />
+			<ZTBehMorph morphEntity="caecilianchorla_Egg" morphPeriod="2" morphTargetEntityType="caecilianchorla_Young_M" />
+			<BFBehKill killSubject="true" />
+		</behaviors>
+	</SpawnM>
+	<EnterIceBlock>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="DockMouth" />
+		</behaviors>
+	</EnterIceBlock>
+	<UseIceBlock>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Eat" />
+		</behaviors>
+	</UseIceBlock>
+	<ExitIceBlock>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitIceBlock>
+	<WaitAttack>
+		<subjects>
+			<caecilianchorla_Adult />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="LoopStand" />
+		</behaviors>
+	</WaitAttack>
+	<ChasePrey>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPursuit hitRadius="5" locoSpeed="fast" pursuitRadius="30" />
+		</behaviors>
+	</ChasePrey>
+	<MissPrey>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Growl" />
+		</behaviors>
+	</MissPrey>
+	<AttackPrey>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate interruptFlag="true" targetAnim="Stand_Eat" />
+			<BFBehPursuit hitRadius="3" locoSpeed="fast" pursuitRadius="30" />
+			<BFBehAnimate interruptFlag="true" loopFlag="true" targetAnim="Stand_Eat" />
+		</behaviors>
+	</AttackPrey>
+	<CallYoung>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Hiss" />
+		</behaviors>
+	</CallYoung>
+	<CallMother>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Hiss" />
+		</behaviors>
+	</CallMother>
+	<Roar>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Hiss" />
+		</behaviors>
+	</Roar>
+	<Growl>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Hiss" />
+		</behaviors>
+	</Growl>
+	<EnterBeefShank>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="DockMouth" />
+		</behaviors>
+	</EnterBeefShank>
+	<UseBeefShank>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Eat" />
+		</behaviors>
+	</UseBeefShank>
+	<ExitBeefShank>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitBeefShank>
+	<EnterLiveFood>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="DockMouth" />
+		</behaviors>
+	</EnterLiveFood>
+	<UseLiveFood>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+			<BFBehAnimate targetAnim="Stand_Eat" />
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</UseLiveFood>
+	<ExitLiveFood>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitLiveFood>
+	<SwipeMed>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</SwipeMed>
+	<HitMed>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_2Lie" />
+		</behaviors>
+	</HitMed>
+	<HitMedDie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_2Lie" />
+			<BFBehPlaySet behSet="Die_Fight" />
+		</behaviors>
+	</HitMedDie>
+	<HitMediumEqual>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<HitMed weight="50" />
+					<HitMedDie weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</HitMediumEqual>
+	<BiteMed>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Eat" />
+		</behaviors>
+	</BiteMed>
+	<BitMed>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_2Lie" />
+		</behaviors>
+	</BitMed>
+	<BitMedDie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_2Lie" />
+			<BFBehPlaySet behSet="Die_Fight" />
+		</behaviors>
+	</BitMedDie>
+	<BitMediumEqual>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehRandomSet>
+				<randomSets>
+					<BitMed weight="50" />
+					<BitMedDie weight="50" />
+				</randomSets>
+			</BFBehRandomSet>
+		</behaviors>
+	</BitMediumEqual>
+	<JumpUp>
+		<subjects>
+			<caecilianchorla_Young />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_Idle" />
+		</behaviors>
+	</JumpUp>
+	<InterspeciesTerritorialCall>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:CallAt" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_4">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalCallGood" priority="0" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="Growl" />
+		</behaviors>
+	</InterspeciesTerritorialCall>
+	<Turn180>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate targetAnim="Stand_TurnRight90" />
+			<BFBehAnimate targetAnim="Stand_TurnRight90" />
+		</behaviors>
+	</Turn180>
+	<DockMouth>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehDock subjectNode="Node_Mouth" />
+		</behaviors>
+	</DockMouth>
+	<DockGreet>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle" targetNode="p_GreetNode" />
+		</behaviors>
+	</DockGreet>
+	<WaitGreet>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate loopFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</WaitGreet>
+	<DockGroom>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehDock subjectNode="Node_Mouth" targetAnim="Stand_Idle" targetNode="p_GroomNode" />
+		</behaviors>
+	</DockGroom>
+	<WaitGroom>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate loopFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</WaitGroom>
+	<Groomed>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:BeingGroomed" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate loopFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</Groomed>
+	<EnterReptilePool1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Pool_EnterA" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="Pool_EnterA" />
+		</behaviors>
+	</EnterReptilePool1>
+	<EnterReptilePool2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Pool_EnterB" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="Pool_EnterB" />
+		</behaviors>
+	</EnterReptilePool2>
+	<EnterReptilePool3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Pool_EnterC" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="Pool_EnterC" />
+		</behaviors>
+	</EnterReptilePool3>
+	<EnterReptilePool4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Lie_Idle" targetTAP="Pool_EnterD" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="Pool_EnterD" />
+		</behaviors>
+	</EnterReptilePool4>
+	<UseReptilePool>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Sleeping" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sleep" />
+		</behaviors>
+	</UseReptilePool>
+	<ExitReptilePool1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Pool_ExitA" />
+		</behaviors>
+	</ExitReptilePool1>
+	<ExitReptilePool2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Pool_ExitB" />
+		</behaviors>
+	</ExitReptilePool2>
+	<ExitReptilePool3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Pool_ExitC" />
+		</behaviors>
+	</ExitReptilePool3>
+	<ExitReptilePool4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Pool_ExitD" />
+		</behaviors>
+	</ExitReptilePool4>
+	<EnterHeatLamp>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestUnder" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockRadial subjectNode="Node_Mouth" targetRadius="3" />
+		</behaviors>
+	</EnterHeatLamp>
+	<UseHeatLamp>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RestingUnder" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</UseHeatLamp>
+	<ExitHeatLamp>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Turn180" />
+		</behaviors>
+	</ExitHeatLamp>
+	<EnterShelter1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode01_BaseA2Branch1AEnd" />
+		</behaviors>
+	</EnterShelter1>
+	<EnterShelter2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode03_BaseB2Branch1BEnd" />
+		</behaviors>
+	</EnterShelter2>
+	<EnterShelter3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode05_BaseC2Branch1CEnd" />
+		</behaviors>
+	</EnterShelter3>
+	<EnterShelter4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode07_BaseD2Branch1DEnd" />
+		</behaviors>
+	</EnterShelter4>
+	<EnterShelter5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode09_BaseE2Branch1EEnd" />
+		</behaviors>
+	</EnterShelter5>
+	<EnterShelter6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Walk_Ahead" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd" />
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Bip01_DockNode11_BaseF2Branch1FEnd" />
+		</behaviors>
+	</EnterShelter6>
+	<UseShelter>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RestingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</UseShelter>
+	<ExitShelter1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode02_Branch1AEnd2ExitA" />
+		</behaviors>
+	</ExitShelter1>
+	<ExitShelter2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode04_Branch1BEnd2ExitB" />
+		</behaviors>
+	</ExitShelter2>
+	<ExitShelter3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode06_Branch1CEnd2ExitC" />
+		</behaviors>
+	</ExitShelter3>
+	<ExitShelter4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode08_Branch1DEnd2ExitD" />
+		</behaviors>
+	</ExitShelter4>
+	<ExitShelter5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode10_Branch1EEnd2ExitE" />
+		</behaviors>
+	</ExitShelter5>
+	<ExitShelter6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ExitingShelter" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Bip01_DockNode12_Branch1FEnd2ExitF" />
+		</behaviors>
+	</ExitShelter6>
+	<EnterRock1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterA" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterA" />
+		</behaviors>
+	</EnterRock1>
+	<EnterRock2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterB" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterB" />
+		</behaviors>
+	</EnterRock2>
+	<EnterRock3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterC" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterC" />
+		</behaviors>
+	</EnterRock3>
+	<EnterRock4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterD" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterD" />
+		</behaviors>
+	</EnterRock4>
+	<EnterRock5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterE" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterE" />
+		</behaviors>
+	</EnterRock5>
+	<EnterRock6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterF" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterF" />
+		</behaviors>
+	</EnterRock6>
+	<EnterRock7>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterG" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterG" />
+		</behaviors>
+	</EnterRock7>
+	<EnterRock8>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterH" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterH" />
+		</behaviors>
+	</EnterRock8>
+	<EnterRock9>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterI" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterI" />
+		</behaviors>
+	</EnterRock9>
+	<EnterRock10>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterJ" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterJ" />
+		</behaviors>
+	</EnterRock10>
+	<EnterRock11>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterK" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterK" />
+		</behaviors>
+	</EnterRock11>
+	<EnterRock12>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterL" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterL" />
+		</behaviors>
+	</EnterRock12>
+	<EnterRock13>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterM" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterM" />
+		</behaviors>
+	</EnterRock13>
+	<EnterRock14>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterN" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterN" />
+		</behaviors>
+	</EnterRock14>
+	<EnterRock15>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterO" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterO" />
+		</behaviors>
+	</EnterRock15>
+	<EnterRock16>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterP" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterP" />
+		</behaviors>
+	</EnterRock16>
+	<EnterRock17>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterQ" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterQ" />
+		</behaviors>
+	</EnterRock17>
+	<EnterRock18>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterR" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterR" />
+		</behaviors>
+	</EnterRock18>
+	<EnterRock19>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterS" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterS" />
+		</behaviors>
+	</EnterRock19>
+	<EnterRock20>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterT" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterT" />
+		</behaviors>
+	</EnterRock20>
+	<EnterRock21>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToClimb" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="Rock_EnterU" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Climbing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTap="false" subjectNode="Floor" targetTAP="Rock_EnterU" />
+		</behaviors>
+	</EnterRock21>
+	<UseRock>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RestingOn" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</UseRock>
+	<ExitRock1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitA" />
+		</behaviors>
+	</ExitRock1>
+	<ExitRock2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitB" />
+		</behaviors>
+	</ExitRock2>
+	<ExitRock3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitC" />
+		</behaviors>
+	</ExitRock3>
+	<ExitRock4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitD" />
+		</behaviors>
+	</ExitRock4>
+	<ExitRock5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitE" />
+		</behaviors>
+	</ExitRock5>
+	<ExitRock6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitF" />
+		</behaviors>
+	</ExitRock6>
+	<ExitRock7>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitG" />
+		</behaviors>
+	</ExitRock7>
+	<ExitRock8>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitH" />
+		</behaviors>
+	</ExitRock8>
+	<ExitRock9>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitI" />
+		</behaviors>
+	</ExitRock9>
+	<ExitRock10>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitJ" />
+		</behaviors>
+	</ExitRock10>
+	<ExitRock11>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitK" />
+		</behaviors>
+	</ExitRock11>
+	<ExitRock12>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitL" />
+		</behaviors>
+	</ExitRock12>
+	<ExitRock13>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitM" />
+		</behaviors>
+	</ExitRock13>
+	<ExitRock14>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitN" />
+		</behaviors>
+	</ExitRock14>
+	<ExitRock15>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitO" />
+		</behaviors>
+	</ExitRock15>
+	<ExitRock16>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitP" />
+		</behaviors>
+	</ExitRock16>
+	<ExitRock17>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitQ" />
+		</behaviors>
+	</ExitRock17>
+	<ExitRock18>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitR" />
+		</behaviors>
+	</ExitRock18>
+	<ExitRock19>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitS" />
+		</behaviors>
+	</ExitRock19>
+	<ExitRock20>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitT" />
+		</behaviors>
+	</ExitRock20>
+	<ExitRock21>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="Rock_ExitU" />
+		</behaviors>
+	</ExitRock21>
+	<EnterHeatedRock1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterA" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterA" />
+		</behaviors>
+	</EnterHeatedRock1>
+	<EnterHeatedRock2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterB" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterB" />
+		</behaviors>
+	</EnterHeatedRock2>
+	<EnterHeatedRock3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterC" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterC" />
+		</behaviors>
+	</EnterHeatedRock3>
+	<EnterHeatedRock4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterD" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterD" />
+		</behaviors>
+	</EnterHeatedRock4>
+	<EnterHeatedRock5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterE" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterE" />
+		</behaviors>
+	</EnterHeatedRock5>
+	<EnterHeatedRock6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterF" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterF" />
+		</behaviors>
+	</EnterHeatedRock6>
+	<EnterHeatedRock7>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterG" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterG" />
+		</behaviors>
+	</EnterHeatedRock7>
+	<EnterHeatedRock8>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="EnterH" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="EnterH" />
+		</behaviors>
+	</EnterHeatedRock8>
+	<UseHeatedRock>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RestingOn" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</UseHeatedRock>
+	<ExitHeatedRock1>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitA" />
+		</behaviors>
+	</ExitHeatedRock1>
+	<ExitHeatedRock2>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitB" />
+		</behaviors>
+	</ExitHeatedRock2>
+	<ExitHeatedRock3>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitC" />
+		</behaviors>
+	</ExitHeatedRock3>
+	<ExitHeatedRock4>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitD" />
+		</behaviors>
+	</ExitHeatedRock4>
+	<ExitHeatedRock5>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitE" />
+		</behaviors>
+	</ExitHeatedRock5>
+	<ExitHeatedRock6>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitF" />
+		</behaviors>
+	</ExitHeatedRock6>
+	<ExitHeatedRock7>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitG" />
+		</behaviors>
+	</ExitHeatedRock7>
+	<ExitHeatedRock8>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="ExitH" />
+		</behaviors>
+	</ExitHeatedRock8>
+	<LoopIdle>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimSwitchSet loopFlag="true">
+				<behaviorTable>
+					<Stand behSet="LoopStand" />
+					<Lie behSet="LoopLie" />
+					<default behSet="LoopStand" />
+				</behaviorTable>
+			</BFBehAnimSwitchSet>
+		</behaviors>
+	</LoopIdle>
+	<LoopStand>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate loopFlag="true" targetAnim="Stand_Idle" />
+		</behaviors>
+	</LoopStand>
+	<LoopLie>
+		<subjects>
+			<caecilianchorla />
+		</subjects>
+		<behaviors>
+			<BFBehAnimate loopFlag="true" targetAnim="Lie_Idle" />
+		</behaviors>
+	</LoopLie>
+	<EnterLookOutPost>
+		<subjects>
+			<caecilianchorla_Young />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToUse" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockTAP subjectNode="Floor" targetAnim="Stand_Idle" targetTAP="DockNode01_BaseA2Branch1AEnd" />
+			<BFBehAnimateTAP exitTAP="false" subjectNode="Floor" targetTAP="DockNode01_BaseA2Branch1AEnd" />
+		</behaviors>
+	</EnterLookOutPost>
+	<UseLookOutPost>
+		<subjects>
+			<caecilianchorla_Young />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:RestingOn" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="20" targetAnim="Lie_Idle" />
+		</behaviors>
+	</UseLookOutPost>
+	<ExitLookOutPost>
+		<subjects>
+			<caecilianchorla_Young />
+		</subjects>
+		<behaviors>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ClimbingDown" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Lie_2Stand" />
+			<BFBehAnimateTAP exitTAP="true" subjectNode="Floor" targetTAP="DockNode02_Branch1AEnd2ExitA" />
+		</behaviors>
+	</ExitLookOutPost>
+	<DockAttackGuest>
+		<subjects>
+			<caecilianchorla_Adult />
+		</subjects>
+		<behaviors>
+			<BFBehDockRadial subjectNode="p_AttackGuestNode" targetAnim="Stand_Idle" />
+		</behaviors>
+	</DockAttackGuest>
+</BehaviorSets>

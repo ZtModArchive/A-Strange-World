@@ -1,0 +1,34 @@
+<BFTypedBinder binderType="caecilianchorla_Young_M">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Reptilia>
+						<Squamata>
+							<Varanidae>
+								<caecilianchorla>
+									<caecilianchorla_Young>
+										<caecilianchorla_Young_M />
+									</caecilianchorla_Young>
+								</caecilianchorla>
+							</Varanidae>
+						</Squamata>
+					</Reptilia>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\units\animals\caecilianchorla\caecilianchorla_Adult_F_icon.dds" />
+			</UIAspect>		<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="caecilianchorla_Young_M" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared b_Male="1" />
+	</shared>
+</BFTypedBinder>

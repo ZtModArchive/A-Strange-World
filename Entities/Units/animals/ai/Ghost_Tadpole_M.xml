@@ -1,0 +1,31 @@
+<BFTypedBinder binderType="Ghost_Tadpole_M">
+   <types>
+      <entity>
+         <actor>
+            <animal>
+               <Amphibia>
+                  <Anura>
+                     <Ranidae>
+						<Ghost_Tadpole>
+							<Ghost_Tadpole_M/>
+						</Ghost_Tadpole>
+                     </Ranidae>
+                  </Anura>
+               </Amphibia>
+            </animal>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Ghost_Tadpole_M"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Male="1"/>
+   </shared>
+   <binder/>
+</BFTypedBinder>

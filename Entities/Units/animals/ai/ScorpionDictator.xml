@@ -1,0 +1,161 @@
+<BFTypedBinder binderType="ScorpionDictator" abstract="true">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Malacostraca>
+						<Decapoda>
+							<Inachidae>
+								<ScorpionDictator />
+							</Inachidae>
+						</Decapoda>
+					</Malacostraca>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\units\animals\ScorpionDictator\ScorpionDictator_Adult_F_icon.dds" />
+			</UIAspect>
+			<UIHelpInfo ids="entityname:ScorpionDictator" />
+			<on>
+				<event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="ScorpionDictator_Adult_F" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared s_Product="Carboniferous Pack"  p_NurseNode="0 -1 90" p_PoleRopeNode="0 -2.5 180"    b_MarineAnimal="true" f_BaseDonationAmount="60" f_MaxTourValue="30" p_FightOffset="0 -.34 180" s_DonateToken="t_DonateScorpionDictator" p_FeedYoungNode="0 -1 180" p_EggOffset="0 -.5 0" p_MateOffset="-1 0 0" p_PreyOffset="0 1 0" s_Endangerment="LowRisk" b_Prey="true" s_Species="ScorpionDictator" b_Basic="true" b_Carnivore="true" b_Piscivore="true" b_Insectivore="true" s_KeeperEatType="Terrain_Meat" b_FoodDishEater="true" s_KeeperDrinkType="FoodDish_Water" b_SmallAnimal="true" f_adoptRemoveTime="0" f_adoptRarity="1" s_Zoopedia="zoopedia:zoopedia_ScorpionDictator:entry" f_RequiredInitialSpace="20" f_RequiredAdditionalSpace="1"  p_TroughNode="0 -1.15 180" p_HollowLogDock=".5 -.5 180"  b_NoOpenToWorldMessage="true" />
+					<BFAINeedAdjusts hunger="0.0" thirst="0" rest="0" exercise="0" privacy="0" social="0" stimulation="0.05" />
+<BFGBiomeData location="pelagic_warm_oceans_worldwide" locationSensitivity="10">
+			<alpine sensitivity="-5" />
+			<borealforest sensitivity="2" />
+			<desert sensitivity="-10" />
+			<grassland sensitivity="2" />
+			<temperateforest sensitivity="3" />
+			<tropicalrainforest sensitivity="10" />
+			<tundra sensitivity="-10" />
+			<savannah sensitivity="2" />
+			<scrub sensitivity="0" />
+			<wetlands sensitivity="10" primary="true" />
+		</BFGBiomeData>
+		<ZTPlacementData waterPlacement="true" icon3Doffset="0 0 .1" icon3Dscale="1.02" landPlacement="true" tankPlacement="true" />
+		<ZTUserStaffAction>
+			<SetAttribute name="hygiene" value="0" threshold="20" locid="superstaff:animal_groom" effect="SuperStaffGroom" />
+			<SetAttribute name="health" value="0" threshold="20" locid="superstaff:animal_heal" />
+		</ZTUserStaffAction>
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFShadowLODComponent numLevels="1" switchingDists="60.0" />
+					<BFActorComponent actorfile="entities/units/animals/ScorpionDictator/ScorpionDictator_Adult_F.bfm" scale="1" />
+                                        <BF4LegsGroundFitComponent heightOffset="0" maxRollError="0.2" maxPitchError="0.1" maxHeightError="0.5" pitchGain="2.00" heightGain="6.0" rollGain="1.0" bicyclePointBack="bp2" bicyclePointFront="bp1"/>
+					<BFForwardMovingComponent />
+					<BFRotYawMovingComponent />
+					<BFCollisionComponent grid="Bip01" />
+					<BFGridCollisionComponent />
+               <BFBoundedObjectComponent worldBounded="0">
+                  <minPoint x="-1000000" y="-100000" z="-100000"/>
+                  <maxPoint x="1000000" y="100000" z="100000"/>
+               </BFBoundedObjectComponent>
+					<BFSwimComponent waterInDistance="0.50" waterOutDistance="0.40" />
+					<BFHeadLookComponent leftRightAnimName="Secondary_HeadLook" lookDirNode="Bip01" lookDirVector="0 1 0" gain_z="-2" fov_extreme_lr="90.0" />
+				</BFPhysObj>
+			</instance>
+			<shared>
+				<BFSharedPhysVars forceComponentUpdateOnPlacement="true" floorNode="Floor" isWaterDisplacer="true" waterDisplacement="0.25 0.5 0.25">
+					<virtualNodes>
+						<Node_Floor x="0" y="-2" z="-.25" yaw="0" pitch="0" roll="0" />
+						<Node_Follow x="1" />
+						<Node_Attacked y="0.5" />
+						<Node_Predator y="-0.7" />
+						<Node_Guest y="-1.25" />
+						<Node_RamWall y="-3.5" />
+						<Node_KelpBed y="-0.75" />
+						<Node_Ball y="-0.55" />
+						<Node_Dish y="-0.55" />
+						<Node_Lure y="-0.75" />
+						<Node_Box y="-0.5" z="0" />
+						<Node_Terrain y="-0.75" z="-1" />
+					</virtualNodes>
+				</BFSharedPhysVars>
+				<BFTextTagMacrosComponent>
+					<MACROS>
+						<macro name="Run" text="anim &apos;Run_Ahead&apos;" />
+						<macro name="Run2Stand" text="anim &apos;Run_2Stand&apos;, anim&apos;Stand_Idle&apos;" />
+						<macro name="Stand2Run" text="anim &apos;Stand_2Run&apos;, anim &apos;Sit_Idle&apos;" />
+						<macro name="Standy2Walk" text="anim &apos;Stand_2Walk&apos;, anim &apos;Walk_TurnLeftA&apos;" />
+						<macro name="Stand" text="anim &apos;Stand_Idle&apos;" />
+						<macro name="TurnLeftA" text="anim &apos;Stand_TurnLeftA&apos;" />
+						<macro name="TurnRightA" text="anim &apos;Stand_TurnRightA&apos;" />
+					</MACROS>
+				</BFTextTagMacrosComponent>
+			</shared>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFBehaviorMgr behaviorVersion="1">
+					<subBehaviors>
+						<BFBehLocoSwitchSet loopFlag="true">
+							<behaviorTable>
+								<ground behSet="Stand_Idle" />
+							</behaviorTable>
+						</BFBehLocoSwitchSet>
+					</subBehaviors>
+				</BFBehaviorMgr>
+			</instance>
+		</BFBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFLocomotionMgr />
+			</instance>
+			<binder>
+				<BFNamedBinder binderName="ground" required="1">
+					<instance>
+						<BFLocoAnimate version="1">
+							<stop name="Stand" />
+							<slow name="Walk" />
+							<medium name="Run" />
+							<fast name="Run" />
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+			</binder>
+		</BFBinder>
+		<BFNamedBinder binderName="foodprop" repopulateMethod="byName" required="1">
+			<instance>
+				<BFGEntityContainer>
+					<slots>
+						<BFGEntityContainerSlot ownContents="false" hideContents="false" capacity="1" />
+					</slots>
+				</BFGEntityContainer>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder>
+			<instance>
+				<BFAICognitiveMgr>
+					<StateThinkers>
+						<ZTAIStateThinker>
+							<BFAIStateVar Name="thirst" ValueMin="0" ValueMax="0" />
+							<BFAIStateVar Name="hunger" ValueMin="0" ValueMax="0" />
+							<BFAIStateVar Name="rest" ValueMin="0" ValueMax="0" />
+							<BFAIStateVar Name="social" ValueMin="0" ValueMax="0" />
+							<BFAIStateVar Name="privacy" ValueMin="0" ValueMax="0" />
+						</ZTAIStateThinker>
+					</StateThinkers>
+				</BFAICognitiveMgr>
+			</instance>
+		</BFBinder>
+		<BFBinder>
+			<instance>
+				<ZTEconomyComponent cost="1000">
+					<ZTTransaction name="build" costType="parent" type="debit" category="animal" />
+				</ZTEconomyComponent>
+			</instance>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

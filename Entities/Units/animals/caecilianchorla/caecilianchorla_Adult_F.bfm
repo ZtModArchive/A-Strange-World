@@ -1,0 +1,88 @@
+<BFM modelname="entities/units/animals/caecilianchorla/caecilianchorla_Adult_F.nif">
+	<animation anim="entities/units/animals/caecilianchorla/Lie_2Stand.bf" animName="Lie_2Stand" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Lie_2Walk.bf" animName="Lie_2Walk" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Lie_Idle.bf" animName="Lie_Idle" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Secondary_Tongue.bf" animName="Secondary_Tongue" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_2Lie.bf" animName="Stand_2Lie" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_2Walk.bf" animName="Stand_2Walk" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Bite.bf" animName="Stand_Bite" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Eat.bf" animName="Stand_Eat" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Hiss.bf" animName="Stand_Hiss" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Idle.bf" animName="Stand_Idle" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Pee.bf" animName="Stand_Pee" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_Poop.bf" animName="Stand_Poop" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_TurnLeft90.bf" animName="Stand_TurnLeft90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_TurnRight180.bf" animName="Stand_TurnRight180" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Stand_TurnRight90.bf" animName="Stand_TurnRight90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_2Lie.bf" animName="Walk_2Lie" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_2Stand.bf" animName="Walk_2Stand" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_Ahead.bf" animName="Walk_Ahead" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_Left.bf" animName="Walk_Left" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_Left90.bf" animName="Walk_Left90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_Right.bf" animName="Walk_Right" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/caecilianchorla/Walk_Right90.bf" animName="Walk_Right90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<Graph name="caecilianchorla_Adult_F" version="1">
+		<node name="Lie">
+			<table>
+				<Lie_Idle />
+			</table>
+			<edge name="Walk">
+				<table>
+					<Lie_2Walk />
+				</table>
+			</edge>
+			<edge name="Stand">
+				<table>
+					<Lie_2Stand />
+				</table>
+			</edge>
+		</node>
+		<node name="Secondary">
+			<table>
+				<Secondary_Tongue />
+			</table>
+		</node>
+		<node name="Stand">
+			<table>
+				<Stand_Bite />
+				<Stand_Eat />
+				<Stand_Hiss />
+				<Stand_Idle />
+				<Stand_Pee />
+				<Stand_Poop />
+				<Stand_TurnLeft90 />
+				<Stand_TurnRight180 />
+				<Stand_TurnRight90 />
+			</table>
+			<edge name="Lie">
+				<table>
+					<Stand_2Lie />
+				</table>
+			</edge>
+			<edge name="Walk">
+				<table>
+					<Stand_2Walk />
+				</table>
+			</edge>
+		</node>
+		<node name="Walk">
+			<table>
+				<Walk_Ahead />
+				<Walk_Left />
+				<Walk_Left90 />
+				<Walk_Right />
+				<Walk_Right90 />
+			</table>
+			<edge name="Lie">
+				<table>
+					<Walk_2Lie />
+				</table>
+			</edge>
+			<edge name="Stand">
+				<table>
+					<Walk_2Stand />
+				</table>
+			</edge>
+		</node>
+	</Graph>
+</BFM>

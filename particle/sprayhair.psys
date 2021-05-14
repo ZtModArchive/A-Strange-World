@@ -1,0 +1,63 @@
+﻿<simulator handle="0" diewhenempty="false">
+	<emitter name="Animated Cone" type="4" handle="1">
+		<param label="initpos" id="0" type="5" usage="0" count="3">0, 0, 0</param>
+		<param label="minspeed" id="4" type="5" usage="0" count="1">-0.1</param>
+		<param label="maxspeed" id="5" type="5" usage="0" count="1">0.1</param>
+		<param label="ratetospawn" id="8" type="5" usage="0" count="1">1000</param>
+		<param label="probability" id="9" type="5" usage="0" count="1">0.800000</param>
+		<param label="areaout" id="6" type="5" usage="0" count="3">1, 0, 0</param>
+		<param label="areaup" id="7" type="5" usage="0" count="3">0, 1, 0</param>
+		<param label="transform" id="10" type="5" usage="0" count="16">1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1</param>
+		<param label="min radius" id="11" type="5" usage="0" count="1">0</param>
+		<param label="max radius" id="12" type="5" usage="0" count="1">0.1</param>
+		<param label="velocity base" id="13" type="5" usage="0" count="3">0, 0, -1</param>
+		<birthrate looped="true">
+			<key time="0.000000" value="500.000000" />
+			<key time="0.100000" value="500.000000" />
+			<key time="0.200000" value="1000.000000" />
+			<key time="0.400000" value="500.000000" />
+		</birthrate>
+	</emitter>
+	<modifier name="Age" type="1" handle="3">
+		<param label="minlife" id="0" type="5" usage="0" count="1">4.500000</param>
+		<param label="maxlife" id="1" type="5" usage="0" count="1">7</param>
+	</modifier>
+	<modifier name="Velocity" type="2" handle="4" />
+	<modifier name="Gravity" type="3" handle="5">
+		<param label="accel" id="0" type="5" usage="0" count="1">2</param>
+	</modifier>
+	<modifier name="Drag" type="4" handle="6">
+		<param label="drag" id="0" type="5" usage="0" count="1">1.000000</param>
+	</modifier>
+	<modifier name="Fade" type="5" handle="7">
+		<param label="fade" id="0" type="5" usage="0" count="4">0, 0.750000, 1, 0</param>
+		<param label="age" id="1" type="5" usage="0" count="2">0.100000, 0.500000</param>
+		<param label="initcolor" id="2" type="5" usage="0" count="4">0.700000, 0.90000, 1, 0</param>
+	</modifier>
+	<modifier name="Size Randomizer" type="7" handle="8">
+		<param label="minsize" id="0" type="5" usage="0" count="1">0.2500000</param>
+		<param label="maxsize" id="1" type="5" usage="0" count="1">0.400000</param>
+	</modifier>
+	<modifier name="Size" type="6" handle="9">
+		<param label="value" id="0" type="5" usage="0" count="4">0.1, 0.500000, 0.750000, 1</param>
+		<param label="age" id="1" type="5" usage="0" count="2">0.250000, 0.500000</param>
+	</modifier>
+	<modifier name="Collision Kill" type="12" handle="10">
+		<param label="planenorm" id="0" type="5" usage="0" count="3">0, 0, -1</param>
+		<param label="planedist" id="1" type="5" usage="0" count="1">10</param>
+	</modifier>
+	<modifier name="Flutter Velocity" type="17" handle="11">
+		<param label="accel" id="0" type="5" usage="0" count="1">5</param>
+	</modifier>
+	<modifier name="Flutter Position" type="18" handle="11">
+		<param label="accel" id="0" type="5" usage="0" count="1">1</param>
+	</modifier>
+	<renderer name="Oriented" type="2" handle="2">
+		<param label="width" id="0" type="5" usage="0" count="1">1</param>
+		<param label="height" id="1" type="5" usage="0" count="1">1</param>
+		<param label="numtilesu" id="2" type="4" usage="0" count="1">1</param>
+		<param label="numtilesv" id="3" type="4" usage="0" count="1">1</param>
+		<param label="material" id="4" type="6" usage="0" count="1">particle_bubble</param>
+		<param label="sortbydistance" id="5" type="0" usage="0" count="1">false</param>
+	</renderer>
+</simulator>

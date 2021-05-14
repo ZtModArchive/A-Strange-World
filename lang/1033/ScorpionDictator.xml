@@ -1,0 +1,32 @@
+<ZT2Strings>
+   <!--entity names-->
+   <entityname>
+      <!--scenery object names-->
+      <ScorpionDictator>ScorpionDictator</ScorpionDictator>
+      <ScorpionDictator_stt>ScorpionDictator</ScorpionDictator_stt>
+      <ScorpionDictator_lower>The ScorpionDictator</ScorpionDictator_lower>
+      <ScorpionDictator_ltt>
+         <color r="255" g="248" b="178">
+            <b>ScorpionDictator</b>
+         </color>
+         <br/>
+        Click to place the ScorpionDictator.
+      </ScorpionDictator_ltt>
+   </entityname>
+      <LOC_STRING _locID="zoopedia_ScorpionDictator:entry">ScorpionDictator</LOC_STRING>
+      <LOC_STRING _locID="zoopedia_ScorpionDictator:text">
+         <cell pady="0" width="1000"/>
+         <p/>
+         <cell width="260"/>
+         <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+            <cell width="600" padx="20" pady="20">
+               <color r="255" g="255" b="255">
+                  <img src="entities/units/animals/ScorpionDictator/ScorpionDictator_icon.dds" sx="0" sy="0" sw="64" sh="64"/>
+                  
+<p/> 
+<p/>
+Created by zerosvalmont               </color>
+            </cell>
+         </cell>
+      </LOC_STRING>
+</ZT2Strings>

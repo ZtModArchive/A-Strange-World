@@ -1,0 +1,34 @@
+<BFTypedBinder binderType="PetalTailGiant_Adult_F">
+    <types>
+       <entity>
+          <actor>
+             <animal>
+                <Mammalia>
+                   <Chiroptera>
+                      <Vespertilionidae>
+                         <PetalTailGiant>
+                            <PetalTailGiant_Adult>
+                               <PetalTailGiant_Adult_F/>
+                            </PetalTailGiant_Adult>
+                         </PetalTailGiant>
+                      </Vespertilionidae>
+                   </Chiroptera>
+                </Mammalia>
+             </animal>
+          </actor>
+       </entity>
+    </types>
+    <instance>
+       <BFGEntity/>
+    </instance>
+    <shared>
+       <BFAIEntityDataShared b_Male="0" f_adoptCount="rand(1,4)"/>
+    </shared>
+    <binder>
+       <BFBinder required="1">
+          <instance>
+             <BFAIEntityDataInstance b_Pregnant="false"/>
+          </instance>
+       </BFBinder>
+    </binder>
+ </BFTypedBinder>

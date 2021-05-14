@@ -1,0 +1,101 @@
+<ZT2Strings>
+   <zoopedia_ScorpionDictator version="2">
+      <entry>ScorpionDictator</entry>
+      <text>
+         <cell pady="0" width="1000"/>
+         <p/>
+         <cell width="260"/>
+         <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+            <cell width="600" padx="20" pady="20">
+            
+               <cell width="284">
+						<cell width="96" bgimg="ui/zoopedia/littleBox-128.tga">
+							<img src="entities/units/animals/ScorpionDictator/ScorpionDictator_Adult_F_icon.dds" sx="0" sy="0" sw="64" sh="64" height="96" width="96"/>
+						</cell>
+						<cell width="16">
+							<img src="ui/zoopedia/icon_male.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						</cell>
+						<cell width="16">
+							<img src="ui/zoopedia/icon_female.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						</cell>
+						<cell width="156"/>
+                  <br/>   
+                  <cell width="32" pady="0">               
+                     <img src="ui/zoopedia/lowrisk.dds" sx="0" sy="0" sw="64" sh="64" width="32" height="32"/>
+                  </cell>                 
+                  <cell width="224" padx="10" pady="0">
+                     <color r="255" g="255" b="255">
+                     Conservation Status:
+                     <br/>
+                        <color r="170" g="255" b="0">
+                     Lower Risk
+                        </color>
+                     </color>                  
+                  </cell>
+               </cell>             
+            
+               <cell width="128">
+                  <color r="255" g="255" b="255">Zbiome1<br/></color>
+                  <img src="ui/icon_biomes/icon_Zbiome1.dds" sx="0" sy="0" sw="128" sh="128" width="96" height="96"/>
+               </cell>
+               <cell width="128">
+                  <color r="255" g="255" b="255">Japan<br/></color>
+                  <img src="ui/icon_maplocations/pelagic_warm_oceans_worldwide.dds" sx="0" sy="0" sw="256" sh="256" width="96" height="96"/>
+               </cell>
+               <br/>
+               <cell width="284" pady="10">
+                  <color r="255" g="255" b="255">Class: Malacostracans <i>(Malacostraca)</i> <br/>Order: Decapods <i>(Decapoda)</i><br/>Family: Inachidaen  <i>(Inachidae)</i><br/>Genus: <i>Macrocheira</i><br/>Species:<i>kaempferi</i></color>
+               </cell>
+               <cell width="256" pady="10">
+                  <img src="UI/zoopedia/biome/ZBiome1_zoopedia_biomebrush.dds" sx="0" sy="0" sw="256" sh="85"/>
+               </cell>
+            </cell>
+         </cell>
+         <p/>
+         <p/>
+         <cell width="260"/>
+         <cell width="300">
+            <cell width="64">
+               <img src="ui/zoopedia/fact-icon64.tga" sx="0" sy="0" sw="64" sh="64"/>
+            </cell>
+            <cell width="176">
+               <color r="255" g="255" b="255">
+                  <font name="arial" size="12" shadowx="2" shadowy="1" shadowa="50">Fun Japanese Spider Crab Facts</font>
+               </color>
+            </cell>
+            <p/>
+            <cell width="280" bgimg="ui/zoopedia/factBG.tga" padx="10">
+               <p/>
+               <cell width="32" pady="10">
+                  <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+               </cell>
+               <cell width="202" pady="10">
+                  <color r="255" g="255" b="255">It has the largest leg span of any arthropod.</color>
+               </cell>
+               <br/>
+               <cell width="32" pady="10">
+                  <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+               </cell>
+               <cell width="202" pady="10">
+                  <color r="255" g="255" b="255">It is the subject of small-scale fishery.</color>
+               </cell>
+            </cell>
+         </cell>
+         <cell width="340">
+           The Japanese spider crab has the greatest leg span of any arthropod, reaching 3.8 metres (12 ft) from claw to claw. The body may grow to a size of 40 centimetres or 16 inches (carapace width) and the whole crab can weigh up to 41 pounds (19 kg). It is the males which have the longest chelipeds; females have much shorter chelipeds, which are shorter than the following pair of legs. Apart from its outstanding size, the Japanese spider crab differs from other crabs in a number of ways. The first pleopods of males are unusually twisted, and its larvae appear primitive. The crab is orange, with white spots along the legs. It is reported to have a gentle disposition "in spite of its ferocious appearance".
+         <p/>
+           Japanese spider crabs are mostly found off the southern coasts of the Japanese island of Honshu, from Tokyo Bay to Kagoshima Prefecture. Outlying populations have been found in Iwate Prefecture and off Su-ao in Taiwan. Adults can be found at depths of up to 600 metres (2,000 ft), or as shallow as 50 metres (160 ft).
+         <p/>
+           In its natural habitat, the Japanese spider crab feeds on shellfish and animal carcasses and may live for up to 100 years. Development of the planktonic larvae is temperature dependent and takes between 54 and 72 days at 12 to 15 C (54 to 59 F).
+         <p/>
+           Temminck, in his original description, noted that the crab was known to the Japanese for the serious injuries it can cause with its strong claws. Nonetheless, the Japanese spider crab is occasionally collected for food, a total of 24.7 tonnes (54,000 lb) was collected in 1976, but only 3.2 tonnes (7,100 lb) in 1985. Fishery is centred around Suruga Bay, and the population has decreased in number, forcing fishermen into exploring deeper waters in order to catch them. The average size caught by fishermen is a leg span of 1.0 to 1.2 metres (3 ft 3 in to 3 ft 10 in).
+         <p/>
+         </cell>
+         <p/>
+         <cell width="260"/>
+  <cell width="620">
+   Content provided courtesy of <color r="255" g="231" b="135">Wikipedia, the free encyclopedia</color>. Spider Crab created by<color r="255" g="231" b="135">Harlequinz eg0</color>.
+  </cell>
+      </text>
+   </zoopedia_ScorpionDictator>
+</ZT2Strings>

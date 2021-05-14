@@ -1,0 +1,63 @@
+<BFTypedBinder binderType="DragonRuby_Young_F">
+
+   <types>
+
+      <entity>
+
+         <actor>
+
+            <animal>
+
+               <Actinopterygii>
+
+                  <Anguilliformes>
+
+                     <Muraenidae>
+
+                        <DragonRuby>
+
+                           <DragonRuby_Young>
+
+                              <DragonRuby_Young_F/>
+
+                           </DragonRuby_Young>
+
+                        </DragonRuby>
+
+                     </Muraenidae>
+
+                  </Anguilliformes>
+
+               </Actinopterygii>
+
+            </animal>
+
+         </actor>
+
+      </entity>
+
+   </types>
+
+   <instance>
+
+      <BFGEntity/>
+
+   </instance>
+
+   <shared>
+
+      <UIToggleButton template="adopt">
+
+         <on>
+
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="DragonRuby_Young_F"/>
+
+         </on>
+
+      </UIToggleButton>
+
+      <BFAIEntityDataShared b_Male="0"/>
+
+   </shared>
+
+</BFTypedBinder>

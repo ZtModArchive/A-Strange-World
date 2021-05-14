@@ -1,0 +1,60 @@
+<BFTypedBinder abstract="true" binderType="SquidPajama_Adult">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Reptilia>
+						<Testudines>
+							<Cheloniidae>
+								<SquidPajama>
+									<SquidPajama_Adult />
+								</SquidPajama>
+							</Cheloniidae>
+						</Testudines>
+					</Reptilia>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity entityVersion="1">
+			<physObjParenting>
+				<parentObj attachnode="link" child="shadowObj" parent="mainObj" postype="ignore" rottype="use" />
+				<parentObj attachnode="link" child="shadowObj2" parent="mainObj" postype="ignore" rottype="use" />
+			</physObjParenting>
+		</BFGEntity>
+	</instance>
+	<shared>
+		<BFAIEntityDataShared b_Adult="1" b_LargePrey="true" f_MorphMessageDuration="30" f_MorphMessagePriority="1" f_adoptCount="rand(1,1)" f_viewBonus="20" s_MorphMessage="zoomessages:AnimalPuberty" />
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="shadowObj">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Bip01 Head" intensity="0.3" shadowTexture="world\shadows\blob\round_blob3.tga" width="0.75" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="shadowObj2">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Bip01 Spine2" intensity="0.3" shadowTexture="world\shadows\blob\round_blob3.tga" width="2.2" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFGCollisionTester escapeBuffer="0.3125" landScore="0" maxSlope=".75" motionClass="swimmer" radius=".625" waterScore="0" />
+			</instance>
+		</BFBinder>
+		<BFNamedBinder binderName="cleanerfish" required="1">
+			<instance>
+				<BFGEntityContainer>
+					<slots>
+						<BFGEntityContainerSlot capacity="1" hideContents="false" ownContents="false" />
+					</slots>
+				</BFGEntityContainer>
+			</instance>
+		</BFNamedBinder>
+	</binder>
+</BFTypedBinder>

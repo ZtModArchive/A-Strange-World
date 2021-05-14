@@ -1,0 +1,126 @@
+﻿<ZT2Strings>
+<entityname>
+   <!--animal names-->
+      <EastIndian>Jeypore Ground Gecko</EastIndian>
+      <EastIndian_stt>Jeypore Ground Gecko</EastIndian_stt>
+      <EastIndian_lower>the Jeypore Ground Gecko</EastIndian_lower>
+      <EastIndian_ltt>
+         <color r="255" g="248" b="178">
+            <b>Jeypore Ground Gecko</b>
+         </color>
+         <br/>
+Click to select and place the Jeypore Ground Gecko, a gecko commonly kept as a pet.
+      </EastIndian_ltt>
+   <!--egg names--> 
+     <EastIndian_Egg>Jeypore Ground Gecko-Egg</EastIndian_Egg> 
+     <EastIndian_Egg_stt>Jeypore Ground Gecko-Egg</EastIndian_Egg_stt> 
+     <EastIndian_Egg_lower>the Jeypore Ground Gecko-Egg</EastIndian_Egg_lower> 
+     <EastIndian_Egg_ltt>
+        <color r="255" g="248" b="178">
+           <b>Jeypore Ground Gecko-Egg</b> 
+        </color>
+        <br/> 
+Click to select and place the Jeypore Ground Gecko-Egg.
+     </EastIndian_Egg_ltt>
+</entityname>
+<zoopedia_EastIndian>
+ <entry>Jeypore Ground Gecko</entry>
+ <text>
+  <cell pady="0" width="1000"/>
+  <p/>
+  <cell width="260"/>
+  <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+   <cell width="600" padx="20" pady="20">
+   
+               <cell width="284">
+						 <cell width="96" bgimg="ui/zoopedia/littleBox-128.tga">
+						  <img src="entities/units/animals/EastIndian/EastIndian_Adult_F_icon.dds" sx="0" sy="0" sw="64" sh="64" height="96" width="96"/>
+						 </cell>
+						 <cell width="16">
+						  <img src="ui/zoopedia/icon_male.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						 </cell>
+						 <cell width="16">
+						  <img src="ui/zoopedia/icon_female.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						 </cell>
+						 <cell width="156"/>
+                  <br/>   
+                  <cell width="32" pady="0">               
+                     <img src="ui/zoopedia/lowrisk.dds" sx="0" sy="0" sw="64" sh="64" width="32" height="32"/>
+                  </cell>                 
+                  <cell width="224" padx="10" pady="0">
+                     <color r="255" g="255" b="255">
+Conservation Status:
+                     <br/>
+                        <color r="255" g="255" b="255">
+Low Risk
+                        </color>
+                     </color>                  
+                  </cell>
+               </cell>   
+   
+    <cell width="128">
+     <color r="255" g="255" b="255">Desert<br/></color>
+     <img src="ui/icon_biomes/icon_desert.dds" sx="0" sy="0" sw="128" sh="128" width="96" height="96"/>
+    </cell>
+    <cell width="128">
+     <color r="255" g="255" b="255">Arabia<br/></color> 
+     <img src="ui/icon_maplocations/Scrub_Arabia.dds" sx="0" sy="0" sw="256" sh="256" width="96" height="96"/>
+    </cell>
+    <br/>
+    <cell width="284" pady="10">
+     <color r="255" g="255" b="255">Class: Reptiles <i>(Sauropsida)</i><br/>Order: Scaly lizards <i>(Squamata)</i><br/>Family: Geckos <i>(Gekkonidae)</i><br/>Genus: <i>Eublepharis</i><br/>species: <i>macularius</i>
+     </color>
+    </cell>
+    <cell width="256" pady="10">
+     <img src="UI/zoopedia/biome/desert_zoopedia_biomebrush.dds" sx="0" sy="0" sw="256" sh="85"/>
+    </cell>
+   </cell>
+  </cell>
+  <p/>
+  <p/>
+  <cell width="260"/>
+  <cell width="300">
+   <cell width="64">
+    <img src="ui/zoopedia/fact-icon64.tga" sx="0" sy="0" sw="64" sh="64"/>
+   </cell>
+   <cell width="176">
+    <color r="255" g="255" b="255">
+     <font name="arial" size="12" shadowx="2" shadowy="1" shadowa="50">Fun Jeypore Ground Gecko facts</font>
+    </color>
+   </cell>
+   <p/>
+   <cell width="280" bgimg="ui/zoopedia/factBG.tga" padx="10">
+    <p/>
+    <cell width="32" pady="10">
+     <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+    </cell>
+    <cell width="202" pady="10">
+     <color r="255" g="255" b="255">Jeypore Ground Geckos were the first domesticated reptile.</color>
+    </cell>
+	<cell width="32" pady="10">
+		<img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+	</cell>    
+    <cell width="202" pady="10">
+     <color r="255" g="255" b="255">Jeypore Ground Geckos feed on crickets, wax worms, mealworms, super worms, and other insects.</color>
+    </cell>
+  </cell>
+  </cell>
+  <cell width="340">
+   <color r="255" g="248" b="178">
+To unlock the Jeypore Ground Gecko in challenge or campaign games, you must earn a 2 star zoo fame rating for your zoo.
+   </color>
+<p/>The Jeypore Ground Gecko is a nocturnal ground-dwelling lizard naturally found in the deserts of Asia and throughout Pakistan, to the northwestern parts of India. Unlike most geckos, Jeypore Ground Geckos possess movable eyelids. It has become a well-established and popular pet in captivity.
+<p/>Jeypore Ground Geckos are typically large for a gecko. Hatchlings tend to be 6.5 to 8.4 cm (2.6 to 3.3 inches) in length and weighing about 3 grams while the adult geckos are about 20.5 to 27.5 cm (8.1 to 10.9 inches) in length and weigh about 45 to 65 grams.
+<p/>Those found in the wild typically have a darker, dull, and drab coloration than those kept in captivity as pets. Those in captivity generally have an assortment of skin colors and patterns. The skin of a Jeypore Ground Gecko is very durable, which provides protection from the rough sand and rocky hills terrain of their dry environment. Their dorsal side is covered with small bumps, which gives a rough texture and appearance while their ventral side is thin, transparent, and smooth. Like all reptiles, Jeypore Ground Geckos shed their skin. In the few days before the shedding, the skin will turn color to a translucent whitish gray. Adults shed an average of once a month, while juveniles will sometimes shed twice as much. The gecko will eat its old skin after shedding, revealing a brighter colored one. There are 2 theories of why Jeypore Ground Geckos do this. One is that in the wild Jeypore Ground Geckos eat their shedded skin so there is no trace that the Jeypore Ground Gecko was there. The other theory is that eating the shedded skin is a means for obtaining protein and vitamins for growth.
+<p/>Jeypore Ground Geckos are ectothermic. They absorb warmth and energy during the day as they are sleeping, so they can hunt and digest food at night. In addition, they have short legs, which enable them to be quick and agile while their small nails allow them to climb twigs and rocks. Jeypore Ground Geckos have openings on either side of their head as ears. A tympanic membrane covers and protects it. They use their ears to locate their prey. Healthy Jeypore Ground Geckos have thick, fleshy tails while a thin tail is an indication that the gecko is not healthy and may be lacking nutrition. Although, when in captivity, the tail can be fattened by the feeding of Wax Worms (The Wax Moth Larvae), these worms are typically too fatty for the Gecko to get the nutritional value it needs. They can also be fed 'pinkys', a one day old mouse to fatten up the tail, but again, these are very low in nutritional value. It is highly suggested by breeders and pet enthusiasts that you coat your crickets in a nutritional powder before serving them either live or dead. Their thick tails can regenerate when lost. However, the regenerated tails appear stumpy and never has the same appearance as the original tail.
+<p/>The native habitat of the Jeypore Ground Gecko is the rocky, dry grassland and desert regions of south-Asian Afghanistan, Pakistan, north-west India, and parts of Iran. Winter temperatures in these areas can be quite low, below 10 °C (50 °F), forcing the animals underground into semi-hibernation, called brumation, living on fat reserves. As nocturnal creatures, they spend the day hidden under rocks or in burrows to escape the daytime heat and emerge at dusk to feed by hunting insects. These Geckos are solitary, and do not usually live with other animals.
+<p/>Jeypore Ground Geckos feed on crickets, wax worms, mealworms, super worms, and other insects. In captivity, most individuals will prefer hunting food themselves. The majority of captive Jeypore Ground Geckos will also refuse to eat dead prey (unless you force feed them.) Crickets are the most common food source to give them as they can hunt them in their enclosure the way they would in their natural environment. When food is scarce in the desert, they can rely on their ability to store excess fat in their tails. Sufficient calcium and vitamin D3 is also very important for their diet: How they obtain it in the wild is still unknown, although they likely receive this from their varied prey of moths, spiders, ants, and other insects. In captivity, it is near impossible to completely duplicate the diet they will have in the wild, so the most nutritious insects known are offered, usually dusted with a fine calcium powder with added vitamin D3 and sometimes gut loaded by feeding. Also, their keen sense of smell and sight allows them to search for food in the wild, they will stalk their prey just like an actual leopard will, move their tail, and then strike when they are satisfied.
+  </cell>
+  <p/>
+  <cell width="260"/>
+  <cell width="620">
+Content from Wikipedia<p/>
+  </cell>
+ </text>
+</zoopedia_EastIndian>
+</ZT2Strings>

@@ -1,0 +1,1420 @@
+<BFAITaskTemplateList>
+	<BFAITaskTemplate Name="Idle" UniqueID="SquidPajama:Idle">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="0.002" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Idle" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Submerge" TaskDelayMax="90" TaskDelayMin="45" UniqueID="SquidPajama:Submerge">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND isSwimming="true" isSwimmingOnSurface="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Submerge" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" rest="5" stimulation="-2" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub" UniqueID="SquidPajama:WanderWaterSub">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="4" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_1" />
+			<BFBehPlaySet behSet="WanderSub" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-2" hygiene="-2" rest="10" stimulation="-2" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_Happy" UniqueID="SquidPajama:WanderWaterSub_Happy">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="5" needPointsGood="30" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehPlaySet behSet="WanderSub" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-2" hygiene="-2" rest="10" stimulation="-2" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteHappy" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_Rest" UniqueID="SquidPajama:WanderWaterSub_Rest">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap rest="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<BFBehPlaySet behSet="WanderRest" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="20" rest="-75" stimulation="20" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalRestVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_RestGood" UniqueID="SquidPajama:WanderWaterSub_RestGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="20">
+			<BFAIAttributeFloatMap rest="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehPlaySet behSet="WanderRest" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="15" rest="-100" stimulation="15" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalRestVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_Stimulation" UniqueID="SquidPajama:WanderWaterSub_Stimulation">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap stimulation="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LookingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_1" />
+			<BFBehPlaySet behSet="WanderSub_Med" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" rest="20" stimulation="-25" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalStimulationGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_StimulationGood" UniqueID="SquidPajama:WanderWaterSub_StimulationGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="20">
+			<BFAIAttributeFloatMap stimulation="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LookingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehPlaySet behSet="WanderSub_Med" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-10" rest="20" stimulation="-40" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalStimulationVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_Exercise" UniqueID="SquidPajama:WanderWaterSub_Exercise">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap exercise="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:SwimmingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<BFBehPlaySet behSet="WanderSub_Fast" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-30" rest="20" stimulation="-5" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSub_ExerciseGood" UniqueID="SquidPajama:WanderWaterSub_ExerciseGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="20">
+			<BFAIAttributeFloatMap exercise="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:SwimmingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehPlaySet behSet="WanderSub_Fast" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-40" rest="20" stimulation="-10" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="ShakeHygiene" TaskDelayMax="60" TaskDelayMin="30" UniqueID="SquidPajama:ShakeHygiene">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap hygiene="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Shaking" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalShakeGood" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="Slash" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" hygiene="-30" rest="10" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalHygieneGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehPlaySet behSet="Slash" />
+			</BFBehExecTask>
+			<BFAIAttributeFloatMap exercise="-5" hygiene="-30" rest="10" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="ShakeHygieneGood" UniqueID="SquidPajama:ShakeHygieneGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="20">
+			<BFAIAttributeFloatMap hygiene="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Shaking" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_4">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalShakeGood" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="SlashFrenzy" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-10" hygiene="-100" rest="30" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalHygieneVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="OffspringCheck" TaskDelayMax="300" TaskDelayMin="180" UniqueID="SquidPajama:OffspringCheck">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<SquidPajama_Old_F />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="1000" />
+		<BFBehExecTask>
+			<BFBehScript context="behavior" file="scripts/canreproduce.lua" function="canreproduce" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITokenList>
+				<BFAIToken GiveTo="subject" Name="t_Childless" OnlyOne="true" Timeout="180" />
+			</BFAITokenList>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="CantReproduce" TaskDelayMax="420" TaskDelayMin="300" UniqueID="SquidPajama:CantReproduce">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<SquidPajama_Old_F />
+				<Qualifiers_AND b_Pregnant="E false" hasMate="false" />
+			</Subjects>
+			<Targets>
+				<SquidPajama_Adult_M />
+				<SquidPajama_Old_M />
+				<Qualifiers_AND canMate="false" inHabitat="true" />
+			</Targets>
+			<Objects>
+				<t_Childless />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="50">
+			<BFAIAttributeFloatMap reproduction="-27" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalCantReproduce" priority="-1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITokenList>
+				<BFAIToken GiveTo="subject" Name="t_Childless" OnlyOne="true" Timeout="180" />
+			</BFAITokenList>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="InviteReproduction" TaskDelayMax="180" TaskDelayMin="60" UniqueID="SquidPajama:InviteReproduction">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<SquidPajama_Old_F />
+				<Qualifiers_AND b_Pregnant="E false" isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<SquidPajama_Adult_M />
+				<SquidPajama_Old_M />
+				<Qualifiers_AND canMate="true" isSwimming="true" />
+			</Targets>
+			<Objects>
+				<t_Childless />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="50">
+			<BFAIAttributeFloatMap reproduction="-40" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehFaceTarget />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_Reproduce" Payload="subject" Reconsider="true" Timeout="30" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:WaitMate" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="WaitReproduction" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="RespondReproduction" UniqueID="SquidPajama:RespondReproduction" reserveTag="General">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_M />
+				<SquidPajama_Old_M />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inHabitat="true" inWater="true" isSwimming="true" />
+			</Targets>
+			<Objects>
+				<t_Reproduce />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_3" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehSyncSet subjectBehSet="Rendezvous" targetBehSet="Rendezvous" />
+			<BFBehSyncSet subjectBehSet="ReproductionSwimLead" targetBehSet="ReproductionSwimFollow" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="75" GiveTo="target" Name="t_Pregnant1" Timeout="-1" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-50" rest="-10" />
+			<BFAITargetData rest="-10" />
+			<BFBehExecTask>
+				<BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Pregnant" UniqueID="SquidPajama:Pregnant">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<SquidPajama_Old_F />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Pregnant1 />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="50" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:PregnantAnimal" priority="1" timeout="30" useEntityName="true" />
+					<ZTEmoticonInfo emoticonName="EmotePregnant" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITargetData b_Pregnant="true" />
+			<BFBehExecTask>
+				<BFBehSendToken>
+					<BFAITokenList>
+						<BFAIToken GiveTo="subject" Name="t_Pregnant" OnlyOne="true" RetainOnFailure="true" Timein="70.21" Timeout="-1" />
+					</BFAITokenList>
+				</BFBehSendToken>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Birth" UniqueID="SquidPajama:Birth">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<SquidPajama_Old_F />
+				<Qualifiers_AND inWater="true" isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Pregnant />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000">
+			<BFAIAttributeFloatMap reproduction="-90" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Surface" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLayEgg" />
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalGoingToLayEgg" priority="1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LayingEgg" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate targetAnim="Swim_Idle" />
+			<BFBehPlaySet behSet="LayEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-100" />
+			<BFAISubjectData b_Pregnant="false" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_5">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalBornGood" priority="1" timeout="60" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalBirth" priority="1" timeout="30" useEntityName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="IdleEgg" UniqueID="SquidPajama:IdleEgg">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Egg />
+				<Qualifiers inWater="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="IdleEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="HatchEgg" UniqueID="SquidPajama:HatchEgg">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Egg />
+				<Qualifiers_AND inWater="true" incubation="GE 1.24" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="200" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="HatchEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Born" TaskDelayMax="100000" TaskDelayMin="10000" UniqueID="SquidPajama:Born">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Young />
+				<Qualifiers_AND inWater_OR_onLand="true" lifespan="LE 1" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Born" />
+					<ZTEmoticonInfo emoticonName="EmoteBirth" emoticonScale="0.5" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="SlashFrenzy" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Puberty" TaskDelayMax="60" TaskDelayMin="60" UniqueID="SquidPajama:Puberty">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Young />
+				<Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 2.78" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="50" GiveTo="subject" Name="t_Age" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Age_F" UniqueID="SquidPajama:Age_F">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Young_F />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Age />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph initScale="0.55" morphPeriod="10" morphScale="true" morphTargetEntityType="SquidPajama_Adult_F" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Age_M" UniqueID="SquidPajama:Age_M">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Young_M />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Age />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph initScale="0.55" morphPeriod="10" morphScale="true" morphTargetEntityType="SquidPajama_Adult_M" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Old_F" TaskDelayMax="60" TaskDelayMin="60" UniqueID="SquidPajama:Old_F">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_F />
+				<Qualifiers lifespan="GE 26.13" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap lifespan="-100" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_1" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="25" GiveTo="subject" Name="t_Die" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Old_M" TaskDelayMax="60" TaskDelayMin="60" UniqueID="SquidPajama:Old_M">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult_M />
+				<Qualifiers lifespan="GE 17.13" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap lifespan="-100" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_1" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="25" GiveTo="subject" Name="t_Die" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Die_Sick" Priority="3" UniqueID="SquidPajama:Die_Sick">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND health="GE 99" inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="15000" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Die_Sick" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="EvadePrivacy" UniqueID="SquidPajama:EvadePrivacy">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap privacy="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:SeekingPrivacy" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalPrivacyGood" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehEvasion evasionRadius="8" evasionTime="15" locoSpeed="medium">
+				<avoidEntityTypes>
+					<Guest />
+				</avoidEntityTypes>
+			</BFBehEvasion>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" privacy="-40" rest="15" stimulation="-5" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalPrivacyGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="EvadePrivacyGood" UniqueID="SquidPajama:EvadePrivacyGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="20">
+			<BFAIAttributeFloatMap privacy="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:SeekingPrivacy" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalPrivacyGood" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehEvasion evasionRadius="8" evasionTime="15" locoSpeed="medium">
+				<avoidEntityTypes>
+					<Guest />
+				</avoidEntityTypes>
+			</BFBehEvasion>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-10" privacy="-60" rest="10" stimulation="-10" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalPrivacyVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Chase_Adult" TaskDelayMax="120" TaskDelayMin="60" UniqueID="SquidPajama:Chase_Adult">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<SquidPajama_Adult />
+				<Qualifiers_AND inHabitat="true" isSwimming="true" notInSight="8" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="15">
+			<BFAIAttributeFloatMap reproduction="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:PlayChasing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPursuit hitRadius="8" locoSpeed="fast" pursuitRadius="15" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_EvadePlayAdult" Payload="subject" Radius="30" Reconsider="true" Timeout="15" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<BFBehPlaySet behSet="Idle" />
+			<BFBehPursuit hitRadius="5" locoSpeed="fast" pursuitRadius="15" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-20" rest="20" social="-25" stimulation="-20" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalSocialVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Evade_Adult" UniqueID="SquidPajama:Evade_Adult">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inWater="true" />
+			</Targets>
+			<Objects>
+				<t_EvadePlayAdult />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Fleeing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_5">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedGood" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehEvasion evasionRadius="10" locoSpeed="fast" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-10" reproduction="30" rest="20" social="-10" />
+			<BFAITargetData reproduction="-30" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="EvadeAttack" UniqueID="SquidPajama:EvadeAttack">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inWater="true" />
+			</Targets>
+			<Objects>
+				<t_Attack />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="1000" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Fleeing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Neg_5">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedBad" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehEvasion evasionRadius="10" locoSpeed="evade" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-20" rest="30" social="15" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Evade" UniqueID="SquidPajama:Evade">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inWater="true" />
+			</Targets>
+			<Objects>
+				<t_Flee />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="1000" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Fleeing" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_5">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedGood" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehEvasion evasionRadius="10" locoSpeed="evade" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-20" rest="30" social="15" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="SyncSwim_Invite" TaskDelayMax="60" TaskDelayMin="30" UniqueID="SquidPajama:SyncSwim_Invite" reserveTag="General">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<SquidPajama />
+				<Qualifiers_AND inHabitat="true" isSwimming="true" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap social="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_SyncSwim" Payload="subject" Radius="30" Reconsider="true" Timeout="15" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="SyncSwim_Respond" UniqueID="SquidPajama:SyncSwim_Respond">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inHabitat="true" isSwimming="true" />
+			</Targets>
+			<Objects>
+				<t_SyncSwim />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="90" />
+		<BFBehExecTask>
+			<BFBehSyncSet subjectBehSet="Rendezvous" targetBehSet="Rendezvous" />
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<BFBehSyncSet subjectBehSet="SyncSwimLead" targetBehSet="SyncSwimFollow" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap social="-30" />
+			<BFAITargetData social="-30" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalSocialGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="SyncSwim_RespondGood" UniqueID="SquidPajama:SyncSwim_RespondGood">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND inHabitat="true" isSwimming="true" />
+			</Targets>
+			<Objects>
+				<t_SyncSwim />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" needPointsGood="20" />
+		<BFBehExecTask>
+			<BFBehSyncSet subjectBehSet="Rendezvous" targetBehSet="Rendezvous" />
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehSyncSet subjectBehSet="SyncSwimLead" targetBehSet="SyncSwimFollow" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap social="-50" />
+			<BFAITargetData social="-50" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalSocialVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="AttackGuest" Priority="5" TaskDelayMax="60" TaskDelayMin="30" UniqueID="SquidPajama:AttackGuest" reserveTag="General">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama_Adult />
+				<Qualifiers_AND inWater="true" isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<Guest_Adult_M />
+				<Qualifiers_AND b_Attacked="E false" inHabitat="true" inSight="25" inWater="true" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="500" />
+		<BFBehExecTask>
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_InteractAnimal" Payload="subject" Radius="30" Reconsider="true" Timeout="30" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:InteractGuest" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehSyncSet subjectBehSet="DockAttackGuest" targetBehSet="WaitAnimalInteraction" />
+		</BFBehExecTask>
+		<BFAICompletionData invalidateTarget="true">
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAngry" />
+						<ZTActionInfo locID="animalactions:AttackingGuest" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehSyncSet subjectBehSet="AttackGuest" targetBehSet="AttackedSquidPajama" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:GuestAttacked" priority="-1" timeout="60" useEntityName="true" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+			<BFAISubjectData b_Escaped="true" />
+			<BFAITargetData b_Attacked="true" f_departurePoints="-10" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Beached" Priority="1" UniqueID="SquidPajama:Beached">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND inWater="false" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Beached" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Neg_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalBeachedBad" priority="-1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehAnimate interruptFlag="true" targetAnim="OnLand_Idle" />
+			<BFBehAnimate interruptFlag="true" targetAnim="OnLand_Twitch" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap health="3" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalBeached" priority="-1" timeout="15" useTargetName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAngry" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehAnimate interruptFlag="true" targetAnim="OnLand_Dying" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Submerge_Daytime" UniqueID="SquidPajama:Submerge_Daytime">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND isSwimming="true" isSwimmingOnSurface="true" timeOfDayMax="LE 16" timeOfDayMin="GE 10" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Submerge" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" rest="5" stimulation="-2" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Surface_Night" TaskDelayMax="60" TaskDelayMin="30" UniqueID="SquidPajama:Surface_Night">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND isSwimming="true" timeOfDay="GE 16" />
+			</Subjects>
+			<Targets>
+				<water />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="10" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Surface" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWaterSurf_Night" UniqueID="SquidPajama:WanderWaterSurf_Night">
+		<BFAICreateData>
+			<Subjects>
+				<SquidPajama />
+				<Qualifiers_AND isSwimming="true" timeOfDay="GE 16" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap exercise="-15" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="WanderSurf" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-5" stimulation="-5" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+</BFAITaskTemplateList>

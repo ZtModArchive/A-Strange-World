@@ -1,0 +1,73 @@
+<BFTypedBinder binderType="EastIndian_Egg">
+   <types>
+      <entity>
+         <egg>
+            <EastIndian_Egg/>
+         </egg>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <ZTPlacementData icon3Doffset="0 0 0.3" icon3Dscale="5.0"/>
+      <UIToggleButton template="adopt">
+         <UIHelpInfo name="" short="" long="" help="" ids="entityname:EastIndian_Egg"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="EastIndian_Egg"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared s_Species="EastIndian" s_Zoopedia="zoopedia:zoopedia_EastIndian:entry" s_Endangerment="LowRisk"/>
+		<BFGBiomeData location="desert_northafrica" locationSensitivity="10">
+			<alpine sensitivity="-8" />
+			<borealforest sensitivity="-5" />
+			<desert sensitivity="10" primary="true" />
+			<grassland sensitivity="5" />
+			<temperateforest sensitivity="-2" />
+			<tropicalrainforest sensitivity="-5" />
+			<tundra sensitivity="-10" />
+			<savannah sensitivity="0" />
+			<scrub sensitivity="7" />
+			<wetlands sensitivity="0" />
+		</BFGBiomeData>
+   </shared>	
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+            <BFPhysObj>
+               <BFCollisionComponent grid="Bip01"/>
+               <BFActorComponent actorfile="entities/objects/eggs/TortoiseGalapagos_Egg/TortoiseGalapagos_Egg.bfm" activeSequenceName="Stand_Idle" activeSequenceAccumulate="false" scale="0.6"/>
+               <BFGroundFitComponent heightOffset="0.0"/>
+               <BFGridCollisionComponent/>
+            </BFPhysObj>
+         </instance>
+      </BFNamedBinder>
+	<BFBinder required="1">
+		<instance>
+			<BFAICognitiveMgr>
+				<Sensors>
+					<ZTAISensor />
+					<BFAISensorSelf />
+				</Sensors>
+				<StateThinkers>
+					<ZTAIStateThinker>
+						<BFAIStateVar Name="incubation" Value="" ValueMin=".0075" ValueMax="" CessationThreshold="0" DisplayThreshold="0" PressingThreshold="1.3" TriggerThreshold="3.48" CriticalThreshold="3.48" Advanced="true" />
+					</ZTAIStateThinker>
+				</StateThinkers>
+				<TaskThinkers>
+					<ZTAITaskThinker />
+				</TaskThinkers>
+			</BFAICognitiveMgr>
+		</instance>
+		<shared>
+			<BFAICogShared>
+				<BFAINoPerceive>
+					<fence />
+					<path />
+					<entrance />
+				</BFAINoPerceive>
+			</BFAICogShared>
+		</shared>
+	</BFBinder>
+   </binder>
+</BFTypedBinder>

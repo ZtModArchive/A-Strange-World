@@ -1,0 +1,1374 @@
+<BFAITaskTemplateList>
+	<BFAITaskTemplate Name="ChaseLizardLive" UniqueID="caecilianchorla:ChaseLizardLive">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND b_Adult="E true" hunger="GE 20" />
+			</Subjects>
+			<Targets>
+				<LizardLive />
+				<RatLive />
+				<FrogLive />
+				<Qualifiers_AND b_Dead="false" inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap hunger="-40" stimulation="-20" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehFaceTarget />
+			<BFBehHeadLook />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:HuntingPrey" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehViewEvent viewKey="Pos_3">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalStalkGood" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="ChasePrey" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFBehExecTask>
+				<BFBehSendToken>
+					<BFAITokenList>
+						<BFAIToken GiveTo="subject" Name="t_HuntLizardLive" Payload="target" Timeout="20" />
+						<BFAIToken GiveTo="target" Name="t_Attack" Payload="subject" Radius="30" Reconsider="true" Timeout="15" />
+					</BFAITokenList>
+				</BFBehSendToken>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="AttackLizardLive" UniqueID="caecilianchorla:AttackLizardLive">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers_AND b_Dead="false" inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects>
+				<t_HuntLizardLive />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="1000" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:ChasingAnimal" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPursuit hitRadius="3" locoSpeed="evade" pursuitRadius="15" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTActionInfo locID="animalactions:AttackingAnimal" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehSyncSet subjectBehSet="WaitAttack" targetBehSet="DockAttacked" />
+				<ZTBehViewEvent viewKey="Pos_3">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalAttackingGood" priority="-1" timeout="60" useTargetName="true" useTargetTarget="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<BFBehSyncSet subjectBehSet="AttackPrey" targetBehSet="Attacked" />
+				<BFBehKill killTarget="true" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="DefaultTask_caecilianchorla" UniqueID="caecilianchorla:DefaultTask_caecilianchorla">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<water />
+				<Qualifiers_AND inHabitat="true" inSight="25" waterDepth="GE 2" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore=".002" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingInWater" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove locoSpeed="medium" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-30" />
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="Idle" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Wander" UniqueID="caecilianchorla:Wander">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap exercise="-20" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:WalkingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Wander" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-30" rest="10" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_2" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="WanderWater" UniqueID="caecilianchorla:WanderWater">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap exercise="-30" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:SwimmingAround" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Wander" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-30" rest="10" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_2" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalExerciseGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Sleep" UniqueID="caecilianchorla:Sleep">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap rest="-35" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_1" />
+			<BFBehPlaySet behSet="Lie" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Sleeping" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Sleep" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap rest="-100" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalRestVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="DrinkWaterTerrain" UniqueID="caecilianchorla:DrinkWaterTerrain">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<shore />
+				<Qualifiers_AND inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap thirst="-30" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingDrink" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<ZTBehDockWater subjectNode="Node_Mouth" targetAnim="Stand_Idle" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_2" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTActionInfo locID="animalactions:Drinking" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehPlaySet behSet="Drink" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalThirstGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+			<BFAIAttributeFloatMap bathroom="30" thirst="-40" />
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GoToLand_Thirst" UniqueID="caecilianchorla:GoToLand_Thirst">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers isSwimming="true" />
+			</Subjects>
+			<Targets>
+				<ground_cover />
+				<dirt />
+				<Qualifiers_AND inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap thirst="-30" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLand" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove locoSpeed="medium" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap exercise="-15" />
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="Idle" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="OffspringCheck" TaskDelayMax="300" TaskDelayMin="180" UniqueID="caecilianchorla:OffspringCheck">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="1000" />
+		<BFBehExecTask>
+			<BFBehScript context="behavior" file="scripts/canreproduce.lua" function="canreproduce" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITokenList>
+				<BFAIToken GiveTo="subject" Name="t_Childless" OnlyOne="true" Timeout="180" />
+			</BFAITokenList>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="CantReproduce" TaskDelayMax="420" TaskDelayMin="300" UniqueID="caecilianchorla:CantReproduce">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+				<Qualifiers_AND b_Pregnant="E false" hasMate="false" />
+			</Subjects>
+			<Targets>
+				<caecilianchorla_Adult_M />
+				<Qualifiers_AND canMate="false" inHabitat="true" />
+			</Targets>
+			<Objects>
+				<t_Childless />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="50">
+			<BFAIAttributeFloatMap reproduction="-27" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalCantReproduce" priority="-1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITokenList>
+				<BFAIToken GiveTo="subject" Name="t_Childless" OnlyOne="true" Timeout="180" />
+			</BFAITokenList>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="InviteReproduction" TaskDelayMax="180" TaskDelayMin="60" UniqueID="caecilianchorla:InviteReproduction">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+				<Qualifiers b_Pregnant="E false" />
+			</Subjects>
+			<Targets>
+				<caecilianchorla_Adult_M />
+				<Qualifiers_AND canMate="true" inHabitat="true" />
+			</Targets>
+			<Objects>
+				<t_Childless />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="50">
+			<BFAIAttributeFloatMap reproduction="-40" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehHeadLook />
+			<BFBehFaceTarget />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_Reproduce" Payload="subject" Reconsider="true" Timeout="30" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:WaitMate" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehHeadLook disengage="true" />
+			<BFBehPlaySet behSet="Lie_Long" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="RespondReproduction" UniqueID="caecilianchorla:RespondReproduction" reserveTag="General">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_M />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers inHabitat="true" />
+			</Targets>
+			<Objects>
+				<t_Reproduce />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_5" />
+			<BFBehHeadLook />
+			<BFBehFaceTarget />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToMate" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehDockRadial rotError="180" subjectNode="Floor" targetRadius="3" />
+			<BFBehHeadLook disengage="true" />
+			<BFBehSyncSet subjectBehSet="Mate" targetBehSet="Mate" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="75" GiveTo="target" Name="t_Pregnant1" Timeout="-1" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-50" rest="-10" />
+			<BFAITargetData rest="-10" />
+			<BFBehExecTask>
+				<BFBehScript context="behavior" file="scripts/setmates.lua" function="setmates" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Pregnant" UniqueID="caecilianchorla:Pregnant">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Pregnant1 />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="50" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTMessageInfo global="true" locID="zoomessages:PregnantAnimal" priority="1" timeout="30" useEntityName="true" />
+					<ZTEmoticonInfo emoticonName="EmotePregnant" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAITargetData b_Pregnant="true" />
+			<BFBehExecTask>
+				<BFBehSendToken>
+					<BFAITokenList>
+						<BFAIToken GiveTo="subject" Name="t_Pregnant" OnlyOne="true" RetainOnFailure="true" Timein="341.05" Timeout="-1" />
+					</BFAITokenList>
+				</BFBehSendToken>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="LayEggBushes" UniqueID="caecilianchorla:LayEggBushes">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+			</Subjects>
+			<Targets>
+				<bush />
+				<Qualifiers_AND inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects>
+				<t_Pregnant />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2010">
+			<BFAIBiomeMap alpine=".25" borealforest=".50" desert=".75" grassland=".50" savannah=".75" scrub="1.00" temperateforest=".50" tropicalrainforest=".25" tundra=".25" wetlands=".25" />
+			<BFAIAttributeFloatMap reproduction="-100" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLayEgg" />
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalGoingToLayEgg" priority="1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LayingEgg" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="LayEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-100" />
+			<BFAISubjectData b_Pregnant="false" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_5">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalLayEggGood" priority="1" timeout="60" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalLayEgg" priority="1" timeout="30" useEntityName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="LayEggShade" UniqueID="caecilianchorla:LayEggShade">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+				<Qualifiers_AND isSwimming="false" onLand="true" />
+			</Subjects>
+			<Targets>
+				<shade />
+				<Qualifiers_AND inHabitat="true" inSight="25" onLand="true" />
+			</Targets>
+			<Objects>
+				<t_Pregnant />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2005">
+			<BFAIAttributeFloatMap reproduction="-95" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLayEgg" />
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalGoingToLayEgg" priority="1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LayingEgg" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="LayEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-100" />
+			<BFAISubjectData b_Pregnant="false" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_5">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalLayEggGood" priority="1" timeout="60" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalLayEgg" priority="1" timeout="30" useEntityName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="LayEgg_Dirt" UniqueID="caecilianchorla:LayEgg_Dirt">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+				<Qualifiers_AND isSwimming="false" onLand="true" />
+			</Subjects>
+			<Targets>
+				<dirt />
+				<Qualifiers_AND inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects>
+				<t_Pregnant />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000">
+			<BFAIAttributeFloatMap reproduction="-90" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLayEgg" />
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalGoingToLayEgg" priority="1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LayingEgg" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="LayEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-100" />
+			<BFAISubjectData b_Pregnant="false" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_5">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalLayEggGood" priority="1" timeout="60" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalLayEgg" priority="1" timeout="30" useEntityName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="LayEgg_GroundCover" UniqueID="caecilianchorla:LayEgg_GroundCover">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult_F />
+				<Qualifiers_AND isSwimming="false" onLand="true" />
+			</Subjects>
+			<Targets>
+				<ground_cover />
+				<Qualifiers_AND inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects>
+				<t_Pregnant />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000">
+			<BFAIAttributeFloatMap reproduction="-90" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToLayEgg" />
+					<ZTMessageInfo global="true" locID="zoomessages:AnimalGoingToLayEgg" priority="1" timeout="30" useEntityName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:LayingEgg" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="LayEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap reproduction="-100" />
+			<BFAISubjectData b_Pregnant="false" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_5">
+					<ZTFeedbackData>
+						<ZTThoughtInfo global="false" locID="guestthoughts:AnimalLayEggGood" priority="1" timeout="60" useTargetName="true" />
+					</ZTFeedbackData>
+				</ZTBehViewEvent>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTMessageInfo global="true" locID="zoomessages:AnimalLayEgg" priority="1" timeout="30" useEntityName="true" />
+						<ZTEmoticonInfo emoticonName="EmoteAnimalReproductionVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="IdleEgg" UniqueID="caecilianchorla:IdleEgg">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Egg />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="IdleEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="HatchEgg" UniqueID="caecilianchorla:HatchEgg">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Egg />
+				<Qualifiers_AND inWater_OR_onLand="true" incubation="GE 1.6" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="200" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_5">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalEggHatchedGood" priority="1" timeout="60" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="HatchEgg" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Born" TaskDelayMax="100000" TaskDelayMin="10000" UniqueID="caecilianchorla:Born">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Young />
+				<Qualifiers_AND inWater_OR_onLand="true" lifespan="LE 1" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Born" />
+					<ZTEmoticonInfo emoticonName="EmoteBirth" emoticonScale="0.5" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Bite" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowJuvenile" TaskDelayMax="60" TaskDelayMin="60" UniqueID="caecilianchorla:GrowJuvenile">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Young />
+				<Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 4.26" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="50" GiveTo="subject" Name="t_GrowJuvenile" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowJuvenile_F" Priority="100" UniqueID="caecilianchorla:GrowJuvenile_F">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Young_F />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_GrowJuvenile />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph morphPeriod="10" morphScale="true" morphTargetEntityType="caecilianchorla_Juvenile_F" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowJuvenile_M" Priority="100" UniqueID="caecilianchorla:GrowJuvenile_M">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Young_M />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_GrowJuvenile />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph morphPeriod="10" morphScale="true" morphTargetEntityType="caecilianchorla_Juvenile_M" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowAdult" TaskDelayMax="60" TaskDelayMin="60" UniqueID="caecilianchorla:GrowAdult">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Juvenile />
+				<Qualifiers_AND inWater_OR_onLand="true" lifespan="GE 8.26" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="50" GiveTo="subject" Name="t_GrowAdult" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowAdult_F" Priority="100" UniqueID="caecilianchorla:GrowAdult_F">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Juvenile_F />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_GrowAdult />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph morphPeriod="10" morphScale="true" morphTargetEntityType="caecilianchorla_Adult_F" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="GrowAdult_M" Priority="100" UniqueID="caecilianchorla:GrowAdult_M">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Juvenile_M />
+				<Qualifiers inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_GrowAdult />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="2000" />
+		<BFBehExecTask>
+			<ZTBehMorph morphPeriod="10" morphScale="true" morphTargetEntityType="caecilianchorla_Adult_M" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Old" TaskDelayMax="60" TaskDelayMin="60" UniqueID="caecilianchorla:Old">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers lifespan="GE 34.61" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap lifespan="-100" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Sleep" />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken Chance="25" GiveTo="subject" Name="t_Die" Reconsider="true" Timeout="59" />
+				</BFAITokenList>
+			</BFBehSendToken>
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Die" UniqueID="caecilianchorla:Die">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects>
+				<t_Die />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="10000" />
+		<BFBehExecTask>
+			<BFBehPlaySet behSet="Die_OldAge" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="InviteGreet" TaskDelayMax="360" TaskDelayMin="300" UniqueID="caecilianchorla:InviteGreet">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<caecilianchorla />
+				<Qualifiers_AND inHabitat="true" inWater_OR_onLand="true" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="10">
+			<BFAIAttributeFloatMap social="-20" stimulation="-20" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_4" />
+			<BFBehFaceTarget />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_Greet" Payload="subject" Reconsider="true" Timeout="10" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingToGreet" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehAnimate playTime="15" targetAnim="Stand_Idle" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="RespondGreet" UniqueID="caecilianchorla:RespondGreet" reserveTag="General">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+				<Qualifiers inHabitat="true" />
+			</Targets>
+			<Objects>
+				<t_Greet />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_4">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalGreetGood" priority="1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehHeadLook />
+			<BFBehSyncSet subjectBehSet="DockGreet" targetBehSet="WaitGreet" />
+			<BFBehHeadLook disengage="true" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:Greeting" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehSyncSet subjectBehSet="TongueTouch" targetBehSet="TongueTouch" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap social="-30" stimulation="-10" />
+			<BFAITargetData social="-30" stimulation="-10" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalSocialVeryGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Groom" UniqueID="caecilianchorla:Groom">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<self />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData needPointsGood="5">
+			<BFAIAttributeFloatMap hygiene="-25" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Pos_2" />
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GroomingSelf" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehPlaySet behSet="Wander" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap hygiene="-20" />
+			<BFBehExecTask>
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalHygieneGood" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="SleepShade" UniqueID="caecilianchorla:SleepShade">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" />
+			</Subjects>
+			<Targets>
+				<shade />
+				<Qualifiers_AND inHabitat="true" inSight="25" onLand="true" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap rest="-40" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShade" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove locoSpeed="medium" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap privacy="-15" rest="-30" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_1" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalPrivacyGood" />
+						<ZTActionInfo locID="animalactions:RestShade" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehPlaySet behSet="Sleep" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="SleepShade_MidDay" UniqueID="caecilianchorla:SleepShade_MidDay">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" isSwimming="false" timeOfDayMax="LE 16" timeOfDayMin="GE 8" />
+			</Subjects>
+			<Targets>
+				<shade />
+				<Qualifiers_AND inHabitat="true" inSight="25" onLand="true" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap rest="-45" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:GoingRestShade" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehMove locoSpeed="medium" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFAIAttributeFloatMap privacy="-25" rest="-60" />
+			<BFBehExecTask>
+				<ZTBehViewEvent viewKey="Pos_1" />
+				<ZTBehFeedback>
+					<ZTFeedbackData>
+						<ZTEmoticonInfo emoticonName="EmoteAnimalPrivacyGood" />
+						<ZTActionInfo locID="animalactions:RestShade" />
+					</ZTFeedbackData>
+				</ZTBehFeedback>
+				<BFBehPlaySet behSet="Sleep" />
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="Attacked" UniqueID="caecilianchorla:Attacked">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+			</Targets>
+			<Objects>
+				<t_Attack />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedBad" priority="-1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<BFBehPlaySet behSet="MissPrey" />
+		</BFBehExecTask>
+		<BFAICompletionData>
+			<BFBehExecTask>
+				<BFBehSendToken>
+					<BFAITokenList>
+						<BFAIToken GiveTo="subject" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken GiveTo="b_LargePrey" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken GiveTo="b_MediumPrey" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken GiveTo="b_SmallPrey" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken Chance="50" GiveTo="b_LargePredator" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken Chance="75" GiveTo="b_MediumPredator" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+						<BFAIToken GiveTo="b_SmallPredator" Name="t_Flee" Payload="target" Radius="30" Reconsider="true" Timeout="15" />
+					</BFAITokenList>
+				</BFBehSendToken>
+			</BFBehExecTask>
+		</BFAICompletionData>
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="EvadeAttack" UniqueID="caecilianchorla:EvadeAttack">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla />
+				<Qualifiers_AND inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<fromToken />
+			</Targets>
+			<Objects>
+				<t_Flee />
+			</Objects>
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="100" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedBad" priority="-1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:FleeingPredator" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehEvasion evasionRadius="30" locoSpeed="evade" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="AmbushPrey" UniqueID="caecilianchorla:AmbushPrey">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Adult />
+				<Qualifiers hunger="GE 65" />
+			</Subjects>
+			<Targets>
+				<b_MediumPrey />
+				<b_SmallPrey />
+				<b_SmallPredator />
+				<b_MediumPredator />
+				<Qualifiers_AND b_MarineAnimal="false" inHabitat="true" inSight="25" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData>
+			<BFAIAttributeFloatMap hunger="-40" />
+		</BFAIEvalData>
+		<BFBehExecTask>
+			<BFBehHeadLook />
+			<BFBehFaceTarget />
+			<BFBehSendToken>
+				<BFAITokenList>
+					<BFAIToken GiveTo="target" Name="t_Ambush" Payload="subject" Reconsider="true" Timeout="30" />
+				</BFAITokenList>
+			</BFBehSendToken>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:AmbushOther" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehHeadLook disengage="true" />
+			<BFBehAnimate playTime="35" targetAnim="Lie_Idle" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+	<BFAITaskTemplate Name="EvadePredator_Young" UniqueID="caecilianchorla:EvadePredator_Young">
+		<BFAICreateData>
+			<Subjects>
+				<caecilianchorla_Young />
+				<Qualifiers_AND inWater_OR_onLand="true" />
+			</Subjects>
+			<Targets>
+				<b_XLargePredator />
+				<b_LargePredator />
+				<b_MediumPredator />
+				<b_SmallPredator />
+				<Qualifiers_AND inSight="2" sameSpecies="false" />
+			</Targets>
+			<Objects />
+		</BFAICreateData>
+		<BFAIEvalData fixedScore="85" />
+		<BFBehExecTask>
+			<ZTBehViewEvent viewKey="Neg_2">
+				<ZTFeedbackData>
+					<ZTThoughtInfo global="false" locID="guestthoughts:AnimalChasedBad" priority="-1" timeout="60" useTargetName="true" useTargetTarget="true" />
+				</ZTFeedbackData>
+			</ZTBehViewEvent>
+			<ZTBehFeedback>
+				<ZTFeedbackData>
+					<ZTActionInfo locID="animalactions:FleeingPredator" useTargetName="true" />
+				</ZTFeedbackData>
+			</ZTBehFeedback>
+			<BFBehEvasion avoidWater="true" evasionRadius="30" locoSpeed="evade" />
+		</BFBehExecTask>
+		<BFAICompletionData />
+		<BFAIFailureData>
+			<BFBehExecTask>
+				<BFBehPlaySet behSet="FailureSet" />
+			</BFBehExecTask>
+		</BFAIFailureData>
+	</BFAITaskTemplate>
+</BFAITaskTemplateList>

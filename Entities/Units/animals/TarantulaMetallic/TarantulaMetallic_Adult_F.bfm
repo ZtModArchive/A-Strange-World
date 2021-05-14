@@ -1,0 +1,92 @@
+<BFM modelname="entities/units/animals/TarantulaMetallic/TarantulaMetallic_Adult_F.nif">
+	<animation anim="entities/units/animals/TarantulaMetallic/Attack_2Threat.bf" animName="Attack_2Threat" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Attack_Jump.bf" animName="Attack_Jump" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Attack_Picks.bf" animName="Attack_Picks" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Sleep_2Stand.bf" animName="Sleep_2Stand" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Sleep_Idle.bf" animName="Sleep_Idle" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_2Sleep.bf" animName="Stand_2Sleep" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_2Threat.bf" animName="Stand_2Threat" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_2Walk.bf" animName="Stand_2Walk" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_Idle.bf" animName="Stand_Idle" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_TurnLeft90.bf" animName="Stand_TurnLeft90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Stand_TurnRight90.bf" animName="Stand_TurnRight90" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Threat_2Attack.bf" animName="Threat_2Attack" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Threat_2Stand.bf" animName="Threat_2Stand" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Threat_Idle.bf" animName="Threat_Idle" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Walk_2Stand.bf" animName="Walk_2Stand" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Walk_Ahead.bf" animName="Walk_Ahead" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Walk_TurnLeft.bf" animName="Walk_TurnLeft" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<animation anim="entities/units/animals/TarantulaMetallic/Walk_TurnRight.bf" animName="Walk_TurnRight" animSpeed="1.000000" debug="false" explicitUseOnly="false" load="true" resolveUnitCollisions="true" />
+	<Graph name="TarantulaMetallic_Adult_F" version="1">
+		<node name="Attack">
+			<table>
+				<Attack_Jump />
+				<Attack_Picks />
+			</table>
+			<edge name="Threat">
+				<table>
+					<Attack_2Threat />
+				</table>
+			</edge>
+		</node>
+		<node name="Sleep">
+			<table>
+				<Sleep_Idle />
+			</table>
+			<edge name="Stand">
+				<table>
+					<Sleep_2Stand />
+				</table>
+			</edge>
+		</node>
+		<node name="Stand">
+			<table>
+				<Stand_Idle />
+				<Stand_TurnLeft90 />
+				<Stand_TurnRight90 />
+			</table>
+			<edge name="Sleep">
+				<table>
+					<Stand_2Sleep />
+				</table>
+			</edge>
+			<edge name="Threat">
+				<table>
+					<Stand_2Threat />
+				</table>
+			</edge>
+			<edge name="Walk">
+				<table>
+					<Stand_2Walk />
+				</table>
+			</edge>
+		</node>
+		<node name="Threat">
+			<table>
+				<Threat_Idle />
+			</table>
+			<edge name="Attack">
+				<table>
+					<Threat_2Attack />
+				</table>
+			</edge>
+			<edge name="Stand">
+				<table>
+					<Threat_2Stand />
+				</table>
+			</edge>
+		</node>
+		<node name="Walk">
+			<table>
+				<Walk_Ahead />
+				<Walk_TurnLeft />
+				<Walk_TurnRight />
+			</table>
+			<edge name="Stand">
+				<table>
+					<Walk_2Stand />
+				</table>
+			</edge>
+		</node>
+	</Graph>
+</BFM>

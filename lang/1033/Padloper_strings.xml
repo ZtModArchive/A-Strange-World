@@ -1,0 +1,133 @@
+﻿<ZT2Strings>
+   <entityname>
+      <!--animal names-->
+      <Padloper>Speckled Padloper</Padloper>
+      <Padloper_stt>Speckled Padloper</Padloper_stt>
+      <Padloper_lower>the Speckled Padloper</Padloper_lower>
+      <Padloper_ltt>
+         <color r="255" g="248" b="178">
+            <b>Speckled Padloper</b>
+         </color>
+         <br/>
+         Click here to select and place the Speckled Padloper.
+      </Padloper_ltt>
+<!--egg names-->
+      <Padloper_Egg>Speckled Padloper-Egg</Padloper_Egg>
+      <Padloper_Egg_stt>Speckled Padloper-Egg</Padloper_Egg_stt>
+      <Padloper_Egg_lower>the Speckled Padloper-Egg</Padloper_Egg_lower>
+      <Padloper_Egg_ltt>
+         <color r="255" g="248" b="178">
+            <b>Speckled Padloper-Egg</b>
+         </color>
+         <br/>
+         Click here to select and place the Speckled Padloper-Egg.
+       </Padloper_Egg_ltt>
+   </entityname>
+   
+   <!--zoopedia entries-->
+   <zoopedia_Padloper>
+      <entry>Tortoise, Hermann's</entry>
+      <text>
+         <cell pady="0" width="1000"/>
+         <p/>
+         <cell width="260"/>
+         <cell width="640" height="320" bgimg="ui/zoopedia/topCellBg.dds">
+            <cell width="600" padx="20" pady="20">
+            
+
+               <cell width="284">
+						<cell width="96" bgimg="ui/zoopedia/littleBox-128.tga">
+							<img src="entities/units/animals/Padloper/Padloper_Adult_M_icon.dds" sx="0" sy="0" sw="64" sh="64" height="96" width="96"/>						
+						</cell>
+						<cell width="16">
+							<img src="ui/zoopedia/icon_male.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						</cell>					
+						<cell width="16">
+							<img src="ui/zoopedia/icon_female.dds" sx="0" sy="0" sw="64" sh="64" width="16" height="16"/>
+						</cell>
+						<cell width="156"/>
+                  <br/>   
+                  <cell width="32" pady="0">               
+                     <img src="ui/zoopedia/endangered.dds" sx="0" sy="0" sw="64" sh="64" width="32" height="32"/>
+                  </cell>                 
+                  <cell width="224" padx="10" pady="0">
+                     <color r="255" g="255" b="255">
+                     Endangerment:
+                     <br/>
+                        <color r="255" g="125" b="0">
+                     Endangered
+                        </color>
+                     </color>                  
+                  </cell>
+               </cell>            
+            
+               <cell width="128">
+                  <color r="255" g="255" b="255">Scrub<br/></color>
+                  <img src="ui/icon_biomes/icon_scrub.dds" sx="0" sy="0" sw="128" sh="128" width="96" height="96"/>
+               </cell>
+               <cell width="128">
+                  <color r="255" g="255" b="255">Europa<br/></color>
+                  <img src="ui/icon_maplocations/Savannah_Europe.dds" sx="0" sy="0" sw="256" sh="256" width="96" height="96"/>
+               </cell>
+               <br/>
+               <cell width="284" pady="10">
+                  <color r="255" g="255" b="255">Class: Reptiles <i>(Reptilia)</i><br/>Order: Tortoises <i>(Testudinata)</i><br/>Family: Tortoises <i>(Testudinidae)</i><br/>Genus: <i>Testudo</i><br/>Species: <i>hermanni</i></color>
+               </cell>
+               <cell width="256" pady="10">
+                  <img src="UI/zoopedia/biome/scrub_zoopedia_biomebrush.dds" sx="0" sy="0" sw="256" sh="85"/>
+               </cell>
+            </cell>
+         </cell>
+         <p/>
+         <p/>
+         <cell width="260"/>
+         <cell width="300">
+            <cell width="64">
+               <img src="ui/zoopedia/fact-icon64.tga" sx="0" sy="0" sw="64" sh="64"/>
+            </cell>
+            <cell width="176">
+               <color r="255" g="255" b="255">
+                  <font name="arial" size="12" shadowx="2" shadowy="1" shadowa="50">Fun Speckled Padloper Facts</font>
+               </color>
+            </cell>
+            <p/>
+            <cell width="280" bgimg="ui/zoopedia/factBG.tga" padx="10">
+               <p/>
+               <cell width="32" pady="10">
+                  <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+               </cell>
+               <cell width="202" pady="10">
+                  <color r="255" g="255" b="255">Tortoises are particularly long-lived animals, which are presumed to live as long as 70-100 years.</color>
+               </cell>
+               <br/>
+               <cell width="32" pady="10">
+                  <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+               </cell>
+               <cell width="202" pady="10">
+                  <color r="255" g="255" b="255">Breeding and upbringing of Speckled Padloper is quite easy if it is kept in species-appropriate environment. The European Studbook Foundation maintains stud books for both subspecies.</color>
+               </cell>
+               <cell width="32" pady="10">
+                  <img src="ui/zoopedia/fact-bullet.tga" sx="0" sy="0" sw="32" sh="32"/>
+               </cell>
+               <cell width="202" pady="10">
+                  <color r="255" g="255" b="255">There are several tortoise sanctuaries in Europe such as "Carapax" in southern Tuscany, and "Le Village Des Tortues" in the South of France (near Gonfaron). These sanctuaries rescue injured tortoises whilst also taking in unwanted pets. These two sanctuaries specialise in Speckled Padlopers.</color>
+               </cell>
+            </cell>
+         </cell>
+         <cell width="340">
+         <color r="255" g="248" b="178">To unlock the Speckled Padloper in challenge or campaign games, you must earn a 4 star zoo fame rating for your zoo.</color>
+         
+  </cell>
+  <p/>
+  <cell width="260"/>
+  <cell width="620">
+Content from Wikipedia<p/>Part of 
+<a href="zoopedia:zoopedia_reptilia:entry">
+                 <u>
+                    <color r="255" g="231" b="135">REPTILIA</color>
+                 </u>
+              </a>
+  </cell>
+ </text>
+   </zoopedia_tortoisegopher>
+</ZT2Strings>

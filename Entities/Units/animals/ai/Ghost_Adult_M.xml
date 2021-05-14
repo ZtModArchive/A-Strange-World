@@ -1,0 +1,32 @@
+<BFTypedBinder binderType="Ghost_Adult_M">
+   <types>
+      <entity>
+         <actor>
+            <animal>
+               <Amphibia>
+                  <Anura>
+                     <Ranidae>
+                        <Ghost>
+                           <Ghost_Adult>
+                              <Ghost_Adult_M/>
+                           </Ghost_Adult>
+                        </Ghost>
+                     </Ranidae>
+                  </Anura>
+               </Amphibia>
+            </animal>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Ghost_Adult_M"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Male="1" f_adoptCount="rand(1,1)"/>
+   </shared>
+</BFTypedBinder>

@@ -1,0 +1,72 @@
+<BFTypedBinder binderType="caecilianchorla_Nest">
+	<types>
+		<entity>
+			<shelters>
+				<caecilianchorla_Nest />
+			</shelters>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity entityVersion="1">
+			<physObjParenting>
+				<parentObj attachnode="link" child="shadowObj" parent="mainObj" postype="ignore" rottype="use" />
+			</physObjParenting>
+		</BFGEntity>
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\objects\eggs\DinilysiaWWD_Nest\DinilysiaWWD_Nest_icon.dds" />
+			</UIAspect>
+			<UIHelpInfo help="" ids="entityname:caecilianchorla_Nest" long="" name="" short="" />
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="caecilianchorla_Nest" />
+			</on>
+		</UIToggleButton>
+		<ZTPlacementData icon3Doffset="0 0 0.5" icon3Dscale="0.6" terrainFlatten="true" />
+		<BFAIEntityDataShared s_Endangerment="LowRisk" s_Species="caecilianchorla" s_Zoopedia="zoopedia:zoopedia_caecilianchorla:entry" s_uisort="e" />
+		<BFGCollisionData isPassable="true" isTraversable="true" />
+		<BFGBiomeData location="caecilianchorla_asia_south" locationSensitivity="10">
+			<alpine sensitivity="4" />
+			<benthic sensitivity="4" />
+			<borealforest sensitivity="4" />
+			<coastal sensitivity="4" />
+			<desert sensitivity="4" />
+			<grassland sensitivity="4" />
+			<reef sensitivity="4" />
+			<pelagic sensitivity="4" />
+			<temperateforest sensitivity="10" />
+			<tropicalrainforest sensitivity="10" primary="true" />
+			<tundra sensitivity="4" />
+			<savannah sensitivity="4" />
+			<scrub sensitivity="10" />
+			<wetlands sensitivity="4" />
+		</BFGBiomeData>
+		<ZTDevComponent />
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="shadowObj">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Scene Root" ignoreLights="true" maxLength="4" maxOffset=".5" minLength="2.5" minOffset="0" shadowTexture="world\shadows\blob\square_blob.tga" width="2" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFSimpleLODComponent modelfile="entities/objects/eggs/MonitorNile_Nest/MonitorNile_Nest.nif" scale="0.2" />
+					<BFGroundFitComponent heightOffset="0.0" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder>
+			<instance>
+				<ZTEconomyComponent cost="125">
+					<ZTTransaction category="construction" costType="parent" name="build" type="debit" />
+					<ZTTransaction category="recycling" cost="80" costType="%parent" name="destroy" type="credit" />
+				</ZTEconomyComponent>
+			</instance>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

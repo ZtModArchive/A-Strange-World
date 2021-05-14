@@ -1,0 +1,52 @@
+<BFTypedBinder binderType="PetalTailGiant_Adult" abstract="true">
+ 	<types>
+ 		<entity>
+ 			<actor>
+ 				<animal>
+ 					<Mammalia>
+ 						<Chiroptera>
+ 							<Vespertilionidae>
+ 								<PetalTailGiant>
+ 									<PetalTailGiant_Adult />
+ 								</PetalTailGiant>
+ 							</Vespertilionidae>
+ 						</Chiroptera>
+ 					</Mammalia>
+ 				</animal>
+ 			</actor>
+ 		</entity>
+ 	</types>
+ 	<instance>
+ 		<BFGEntity entityVersion="1">
+ 			<physObjParenting>
+ 				<parentObj parent="mainObj" child="shadowObj" rottype="use" postype="ignore" attachnode="link" />
+ 			</physObjParenting>
+ 		</BFGEntity>
+ 	</instance>
+ 	<shared>
+ 		<BFAIEntityDataShared f_viewBonus="20" b_Adult="1" s_MorphMessage="zoomessages:AnimalPuberty" f_MorphMessagePriority="1" f_MorphMessageDuration="30" b_SmallPredator="true" />
+ <ZTUserCameraData parentingXOffset="1" swimmingUI="false" parentingZOffset="1.1" photoModeProhibited="false">   
+<FPCameraNodes>
+<entry nodeName="Bip01 Spine2" />
+</FPCameraNodes>
+</ZTUserCameraData>
+<ZTUserStaffAction>
+<BoardObject locid="superstaff:ride" />
+<DisembarkObject locid="superstaff:getoffride" showSelection="false" />
+</ZTUserStaffAction>
+ 	</shared>
+ 	<binder>
+ 		<BFNamedBinder binderName="shadowObj">
+ 			<instance>
+ 				<BFPhysObj>
+ 					<BFMovingBlobShadowComponent shadowTexture="world\shadows\blob\round_blob3.tga" baseNode="Bip01 Spine" width="1.0" intensity="0.3" />
+ 				</BFPhysObj>
+ 			</instance>
+ 		</BFNamedBinder>
+ 		<BFBinder required="1">
+ 			<instance>
+ 				<BFGCollisionTester escapeBuffer="0.135" radius=".25" motionClass="swimmer" waterScore="10" landScore="0" maxSlope=".50" />
+ 			</instance>
+ 		</BFBinder>
+ 	</binder>
+ </BFTypedBinder> 

@@ -1,0 +1,72 @@
+<BFTypedBinder binderType="TarantulaMetallic_Nest">
+	<types>
+		<entity>
+			<shelters>
+				<TarantulaMetallic_Nest />
+			</shelters>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity entityVersion="1">
+			<physObjParenting>
+				<parentObj attachnode="link" child="shadowObj" parent="mainObj" postype="ignore" rottype="use" />
+			</physObjParenting>
+		</BFGEntity>
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\objects\eggs\TarantulaMetallic_Nest\TarantulaMetallic_Nest_icon.dds" />
+			</UIAspect>
+			<UIHelpInfo help="" ids="entityname:TarantulaMetallic_Egg" long="" name="" short="" />
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="TarantulaMetallic_Egg" />
+			</on>
+		</UIToggleButton>
+		<ZTPlacementData icon3Doffset="0 0 0.5" icon3Dscale="0.6" terrainFlatten="true" />
+		<BFAIEntityDataShared s_Endangerment="LowRisk" s_Species="TarantulaMetallic" s_Zoopedia="zoopedia:zoopedia_TarantulaMetallic:entry" s_uisort="e" />
+		<BFGCollisionData isPassable="true" isTraversable="true" />
+		<BFGBiomeData location="tropicalrainforest_southamerica" locationSensitivity="10">
+			<alpine sensitivity="10" />
+			<benthic sensitivity="10" />
+			<borealforest sensitivity="10" />
+			<coastal sensitivity="10" />
+			<desert sensitivity="10" />
+			<grassland sensitivity="4" />
+			<reef sensitivity="10" />
+			<pelagic sensitivity="10" />
+			<temperateforest sensitivity="10" />
+			<tropicalrainforest primary="true" sensitivity="10" />
+			<tundra sensitivity="10" />
+			<savannah sensitivity="10" />
+			<scrub sensitivity="10" />
+			<wetlands sensitivity="10" />
+		</BFGBiomeData>
+		<ZTDevComponent />
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="shadowObj">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Scene Root" ignoreLights="true" maxLength="4" maxOffset=".5" minLength="2.5" minOffset="0" shadowTexture="world\shadows\blob\square_blob.tga" width="2" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFSimpleLODComponent modelfile="entities/objects/eggs/TarantulaMetallic_Nest/TarantulaMetallic_Nest.nif" scale="0.15" />
+					<BFGroundFitComponent heightOffset="0.0" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder>
+			<instance>
+				<ZTEconomyComponent cost="125">
+					<ZTTransaction category="construction" costType="parent" name="build" type="debit" />
+					<ZTTransaction category="recycling" cost="600" costType="%parent" name="destroy" type="credit" />
+				</ZTEconomyComponent>
+			</instance>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

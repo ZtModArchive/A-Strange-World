@@ -1,0 +1,56 @@
+<BFM modelname="entities\units\animals\PetalTailGiant\PetalTailGiant_Adult_F.nif">
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_Turn180.bf" animName="Stand_Turn180" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_Eat.bf" animName="Stand_Eat" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_Idle.bf" animName="Stand_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_Idle.bf" animName="Perch_Idle" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_2Fly.bf" animName="Stand_2Fly" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Stand_2Fly.bf" animName="Perch_2Fly" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_Right.bf" animName="Fly_Right" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_Left.bf" animName="Fly_Left" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_Ahead.bf" animName="Fly_Ahead" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_Call.bf" animName="Fly_Call" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_2Stand.bf" animName="Fly_2Stand" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+	<animation anim="entities\units\animals\BatGreaterMouseEared\BatGreaterMouseEared_Adult_F_Fly_2Stand.bf" animName="Fly_2Perch" debug="false" animSpeed="1.000000" explicitUseOnly="false" resolveUnitCollisions="true" load="true" />
+</BFM>
+<Graph name="PetalTailGiant_Adult_F" version="1">
+	<node name="Fly">
+		<table>
+			<Fly_Ahead />
+			<Fly_Call />
+			<Fly_Left />
+			<Fly_Right />
+		</table>
+		<edge name="Stand">
+			<table>
+				<Fly_2Stand />
+			</table>
+		</edge>
+		<edge name="Perch">
+			<table>
+				<Fly_2Perch />
+			</table>
+		</edge>
+	</node>
+	<node name="Stand">
+		<table>
+			<Stand_Idle />
+			<Stand_Eat />
+			<Stand_Turn180 />
+		</table>
+		<edge name="Fly">
+			<table>
+				<Stand_2Fly />
+			</table>
+		</edge>
+	</node>
+	<node name="Perch">
+		<table>
+			<Perch_Idle />
+		</table>
+		<edge name="Fly">
+			<table>
+				<Perch_2Fly />
+			</table>
+		</edge>
+	</node>
+</Graph>

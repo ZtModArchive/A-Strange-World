@@ -1,0 +1,32 @@
+<BFTypedBinder binderType="TarantulaMetallic_Young_M">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Reptilia>
+						<Squamata>
+							<Varanidae>
+								<TarantulaMetallic>
+									<TarantulaMetallic_Young>
+										<TarantulaMetallic_Young_M />
+									</TarantulaMetallic_Young>
+								</TarantulaMetallic>
+							</Varanidae>
+						</Squamata>
+					</Reptilia>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="TarantulaMetallic_Young_M" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared b_Male="1" />
+	</shared>
+</BFTypedBinder>

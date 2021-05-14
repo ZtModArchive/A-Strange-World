@@ -1,0 +1,80 @@
+<ZT2Strings>
+      <LOC_STRING _locID="entityname:ScorpionDictator">ScorpionDictator</LOC_STRING>
+      <LOC_STRING _locID="entityname:ScorpionDictator_stt">ScorpionDictator</LOC_STRING>
+      <LOC_STRING _locID="entityname:ScorpionDictator_lower">the ScorpionDictator</LOC_STRING>
+      <LOC_STRING _locID="entityname:ScorpionDictator_ltt">
+         <color r="255" g="248" b="178">
+            <b>ScorpionDictator</b>
+         </color>
+         <br/>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         Click to select and then place a Dictator Scorpion.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </LOC_STRING>
+   <entityname>
+      <!--gift names-->
+      <Bullfrog_Gift>ScorpionDictator Hat</Bullfrog_Gift>
+      <Bullfrog_Gift_stt>ScorpionDictator hat</Bullfrog_Gift_stt>
+      <Bullfrog_Gift_lower>the ScorpionDictator hat</Bullfrog_Gift_lower>
+      <Bullfrog_Gift_ltt>
+         <color r="255" g="248" b="178">
+            <b>ScorpionDictator Hat</b>
+         </color>
+         <br/>Guests who enjoy watching the ScorpionDictator will buy this gift.
+      </Bullfrog_Gift_ltt>
+   </entityname>
+</ZT2Strings>

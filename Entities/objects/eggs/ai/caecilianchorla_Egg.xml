@@ -1,0 +1,80 @@
+<BFTypedBinder binderType="caecilianchorla_Egg">
+	<types>
+		<entity>
+			<egg>
+				<caecilianchorla_Egg />
+			</egg>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<ZTPlacementData icon3Doffset="0 0 0.3" icon3Dscale="5.0" moveable="false" />
+		<UIToggleButton template="adopt">
+			<UIAspect>
+				<default image="entities\objects\eggs\egg_icon.dds" />
+			</UIAspect>
+			<UIHelpInfo help="" ids="entityname:caecilianchorla_Egg" long="" name="" short="" />
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="caecilianchorla_Egg" />
+			</on>
+		</UIToggleButton>
+		<BFAIEntityDataShared s_Endangerment="LowRisk" s_Species="caecilianchorla" s_Zoopedia="zoopedia:zoopedia_caecilianchorla:entry" />
+		<BFGBiomeData location="caecilianchorla_asia_south" locationSensitivity="10">
+			<alpine sensitivity="4" />
+			<benthic sensitivity="4" />
+			<borealforest sensitivity="4" />
+			<coastal sensitivity="4" />
+			<desert sensitivity="4" />
+			<grassland sensitivity="4" />
+			<reef sensitivity="4" />
+			<pelagic sensitivity="4" />
+			<temperateforest sensitivity="10" />
+			<tropicalrainforest sensitivity="10" primary="true" />
+			<tundra sensitivity="4" />
+			<savannah sensitivity="4" />
+			<scrub sensitivity="10" />
+			<wetlands sensitivity="4" />
+		</BFGBiomeData>
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFCollisionComponent grid="Bip01" />
+					<BFActorComponent activeSequenceAccumulate="false" activeSequenceName="Stand_Idle" actorfile="entities/objects/eggs/MonitorNile_Egg/MonitorNile_Egg.bfm" scale="0.1" />
+					<BFGroundFitComponent heightOffset="0.0" />
+					<BFGridCollisionComponent />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFAICognitiveMgr>
+					<Sensors>
+						<ZTAISensor />
+						<BFAISensorSelf />
+					</Sensors>
+					<StateThinkers>
+						<ZTAIStateThinker>
+							<BFAIStateVar Advanced="true" CessationThreshold="0" CriticalThreshold="1.60" DisplayThreshold="0" Name="incubation" PressingThreshold="1.60" TriggerThreshold="1.60" Value="" ValueMax="" ValueMin=".0075" />
+						</ZTAIStateThinker>
+					</StateThinkers>
+					<TaskThinkers>
+						<ZTAITaskThinker />
+					</TaskThinkers>
+				</BFAICognitiveMgr>
+			</instance>
+			<shared>
+				<BFAICogShared>
+					<BFAINoPerceive>
+						<fence />
+						<path />
+						<entrance />
+					</BFAINoPerceive>
+				</BFAICogShared>
+			</shared>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

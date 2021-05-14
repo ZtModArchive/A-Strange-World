@@ -1,0 +1,143 @@
+<BFTypedBinder binderType="PetalTailGiant" abstract="true">
+    <types>
+       <entity>
+          <actor>
+             <animal>
+                <Mammalia>
+                   <Chiroptera>
+                      <Vespertilionidae>
+                         <PetalTailGiant/>
+                      </Vespertilionidae>
+                   </Chiroptera>
+                </Mammalia>
+             </animal>
+          </actor>
+       </entity>
+    </types>
+    <instance>
+       <BFGEntity/>
+    </instance>
+    <shared>
+       <UIToggleButton template="adopt">
+          <UIAspect>
+             <default image="entities\units\animals\PetalTailGiant\PetalTailGiant_Adult_F_icon.dds"/>
+          </UIAspect>
+          <UIHelpInfo ids="entityname:PetalTailGiant"/>
+          <on>
+             <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="PetalTailGiant_Adult_F"/>
+          </on>
+       </UIToggleButton>
+       <BFAIEntityDataShared b_Aerial="true" s_Product="philly" b_Carnivore="true" b_Piscivore="true" b_Insectivore="true" f_BaseDonationAmount="20" f_MaxTourValue="10" p_FightOffset="0 -.75 180" p_PredatorOffset="0 -.75 180" s_DonateToken="t_DonatePetalTailGiant" p_MateOffset="-1 0 0" p_PreyOffset="0 1 0" s_Endangerment="Extinct" s_Species="PetalTailGiant" b_Small="true" s_KeeperEatType="Lamp_Insects" b_SmallAnimal="true" f_adoptRemoveTime="0" f_adoptRarity="10" s_Zoopedia="zoopedia:zoopedia_PetalTailGiant:entry" f_RequiredInitialSpace="1" f_RequiredAdditionalSpace="1" >
+ 			<BFAINeedAdjusts reproduction="0" />
+ 		</BFAIEntityDataShared>
+       <BFGBiomeData location="grassland_northamerica" locationSensitivity="10">
+          <alpine sensitivity="-10"/>
+          <borealforest sensitivity="-8"/>
+          <desert sensitivity="5"/>
+          <grassland sensitivity="0"/>
+          <temperateforest sensitivity="2"/>
+          <tropicalrainforest sensitivity="8"/>
+          <tundra sensitivity="-10"/>
+          <coastal sensitivity="0" />
+          <savannah sensitivity="10"/>
+          <scrub sensitivity="10" primary="true" />
+          <wetlands sensitivity="10"/>
+       </BFGBiomeData>
+       <ZTPlacementData iconAnim="Fly_Ahead" waterPlacement="false" icon3Doffset="0 0.0 0.8" icon3Dscale=".8"/>
+       <ZTUserStaffAction>
+          <SetAttribute name="hygiene" value="0" threshold="20" locid="superstaff:animal_groom" effect="SuperStaffGroom"/>
+          <SetAttribute name="health" value="0" threshold="20" locid="superstaff:animal_heal"/>
+       </ZTUserStaffAction>
+    </shared>
+    <binder>
+       <BFNamedBinder binderName="mainObj">
+          <instance>
+             <BFPhysObj>
+                <BFShadowLODComponent numLevels="1" switchingDists="60.0"/>
+                <BFActorComponent actorfile="entities/units/animals/PetalTailGiant/PetalTailGiant_Adult_F.bfm" scale=".25"/>
+                <BF2LegsGroundFitComponent rightAnkleJoint="Bip01 R Foot" leftAnkleJoint="Bip01 L Foot" ankleRotVectorLeft="0 0 -1" ankleRotVectorRight="0 0 -1" heightOffset="0" fitRadius=".15" frontBuoyancyNode="Node_Buoy"/>
+                <BFForwardMovingComponent/>
+                <BFRotYawMovingComponent/>
+                <BFCollisionComponent grid="Bip01 Spine"/>
+                <BFGridCollisionComponent/>
+                <BFSwimComponent waterInDistance="0.50" waterOutDistance="0.40"/>
+             </BFPhysObj>
+          </instance>
+          <shared>
+             <BFTextTagMacrosComponent>
+                <MACROS>
+			   
+				  <macro name="Ground2Perch" text="as 100 1, anim 'Fly_2Perch'" />
+				  
+				  <macro name="Perch2Ground" text="as 100 1, anim 'Perch_2Fly'" />
+                </MACROS>
+             </BFTextTagMacrosComponent>
+          </shared>
+       </BFNamedBinder>
+       <BFBinder required="1">
+          <instance>
+             <BFBehaviorMgr behaviorVersion="1">
+                <subBehaviors>
+                   <BFBehLocoSwitchSet loopFlag="true">
+                      <behaviorTable>
+                         <ground behSet="Fly_Ahead"/>
+                         <water behSet="Fly_Ahead"/>
+                      </behaviorTable>
+                   </BFBehLocoSwitchSet>
+                </subBehaviors>
+             </BFBehaviorMgr>
+          </instance>
+       </BFBinder>
+       <BFBinder required="1">
+          <instance>
+             <BFLocomotionMgr/>
+          </instance>
+          <binder>
+             <BFNamedBinder binderName="ground" required="1">
+                <instance>
+                   <BFLocoAnimate version="1">
+                      <stop name="Fly"/>
+                      <slow name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+
+                      <medium name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+
+                      <fast name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+
+                      <fly name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+
+                      <stalk name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+
+                      <evade name="Fly" minAnimSpeed="1.0" maxAnimSpeed="1.0"/>
+                   </BFLocoAnimate>
+                </instance>
+             </BFNamedBinder>
+             <BFNamedBinder binderName="water" required="1">
+                <instance>
+                   <BFLocoAnimate version="1" stationaryAnim="Fly_Ahead">
+                      <stop name="Fly"/>
+
+                     <slow name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>
+
+                     <medium name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>
+
+                     <fast name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>
+
+                     <fly name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>
+
+                     <stalk name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>
+
+                     <evade name="Fly" minAnimSpeed="0.5" maxAnimSpeed="0.5"/>					 
+                  </BFLocoAnimate>
+                </instance>
+             </BFNamedBinder>
+          </binder>
+       </BFBinder>
+       <BFBinder>
+          <instance>
+             <ZTEconomyComponent cost="1500">
+                <ZTTransaction name="build" costType="parent" type="debit" category="animal"/>
+             </ZTEconomyComponent>
+          </instance>
+       </BFBinder>
+    </binder>
+ </BFTypedBinder> 

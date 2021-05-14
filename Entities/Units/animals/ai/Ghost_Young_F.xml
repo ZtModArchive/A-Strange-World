@@ -1,0 +1,35 @@
+<BFTypedBinder binderType="Ghost_Young_F">
+   <types>
+      <entity>
+         <actor>
+            <animal>
+               <Amphibia>
+                  <Anura>
+                     <Ranidae>
+                        <Ghost>
+                           <Ghost_Young>
+                              <Ghost_Young_F/>
+                           </Ghost_Young>
+                        </Ghost>
+                     </Ranidae>
+                  </Anura>
+               </Amphibia>
+            </animal>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\units\animals\Ghost\Ghost_Adult_F_icon.dds"/>
+         </UIAspect>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Ghost_Young_F"/>
+         </on>
+      </UIToggleButton>
+      <BFAIEntityDataShared b_Male="0"/>
+   </shared>
+</BFTypedBinder>

@@ -1,0 +1,9 @@
+﻿<ZT2Strings>
+      <LOC_STRING _locID="worldlocation:caecilianchorla_asia_south">Asia</LOC_STRING>
+      <LOC_STRING _locID="worldlocation:caecilianchorla_asia_south_ltt">
+         <color r="255" g="248" b="178">
+            <b>Asia</b>
+         </color>
+         <br/>
+      </LOC_STRING>
+</ZT2Strings>

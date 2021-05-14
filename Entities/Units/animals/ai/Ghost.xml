@@ -1,0 +1,191 @@
+<BFTypedBinder binderType="Ghost" abstract="true">
+   <types>
+      <entity>
+         <actor>
+            <animal>
+               <Amphibia>
+                  <Anura>
+                     <Ranidae>
+                        <Ghost/>
+                     </Ranidae>
+                  </Anura>
+               </Amphibia>
+            </animal>
+         </actor>
+      </entity>
+   </types>
+   <instance>
+      <BFGEntity/>
+   </instance>
+   <shared>
+      <UIToggleButton template="adopt">
+         <UIAspect>
+            <default image="entities\units\animals\Ghost\Ghost_Adult_F_icon.dds"/>
+         </UIAspect>
+         <UIHelpInfo ids="entityname:Ghost"/>
+         <on>
+            <event msg="ZT_SETPLACEMENTOBJECT" data="BFString" string="Ghost_Adult_M"/>
+         </on>
+      </UIToggleButton>
+      <ZTPlacementData waterPlacement="true" icon3Doffset="0 0 1" icon3Dscale="3.5">
+         <cfootprint width="1" height="1"/>
+         <dfootprint width="1" height="1"/>
+      </ZTPlacementData>
+      <BFAIEntityDataShared b_ElevatedFoodDishEater="true" b_LookoutPostUser="true" s_Product="Amphibia" f_BaseDonationAmount="100" f_MaxTourValue="60" s_DonateToken="t_DonateGhost" s_Species="Ghost" s_Endangerment="LowRisk" b_Basic="true" b_Insectivore="true" s_KeeperEatType="Terrain_Insects" b_FoodDishEater="true" s_KeeperDrinkType="FoodDish_Water" b_SmallAnimal="true" f_adoptRarity="1" s_Zoopedia="zoopedia:zoopedia_Ghost:entry" f_RequiredInitialSpace="1" f_RequiredAdditionalSpace="1" b_WetlandsAnimal="true" p_FightOffset="0 -4 180" p_GreetNode="0 -2 180" p_GroomNode="0 -2 180" b_WetlandsOdd="true" b_TropicalRainforestOdd="true" b_TundraOdd="true" b_TemperateForestOdd="true" b_SavannahOdd="true" b_GrasslandOdd="true" b_DesertOdd="true" b_BorealForestOdd="true" b_AlpineOdd="true" b_ScrubAnimal="true" p_PreyOffset="0 1 0" b_ReptilePoolUser="true" p_AttackGuestNode="0 -1.8 180" b_BogSpringUser="true">
+         <BFAINeedAdjusts social="0" privacy="0.1"/>
+      </BFAIEntityDataShared>
+      <BFGBiomeData location="tropicalrainforest_southamerica" locationSensitivity="10">
+		<alpine sensitivity="-5"/>
+		<borealforest sensitivity="0"/>
+		<desert sensitivity="-5"/>
+		<grassland sensitivity="0"/>
+		<temperateforest sensitivity="0"/>
+		<tropicalrainforest sensitivity="10" primary="true"/>
+		<tundra sensitivity="-10"/>
+		<savannah sensitivity="0"/>
+		<scrub sensitivity="-5"/>
+		<wetlands sensitivity="0"/>
+      </BFGBiomeData>
+      <ZTUserStaffAction>
+         <SetAttribute name="hygiene" value="0" threshold="20" locid="superstaff:animal_wash" effect="SuperStaffWashLarge"/>
+         <SetAttribute name="health" value="0" threshold="20" locid="superstaff:animal_heal" effect="SuperStaffHeal"/>
+      </ZTUserStaffAction>
+   </shared>
+   <binder>
+      <BFNamedBinder binderName="mainObj">
+         <instance>
+				<BFPhysObj>
+					<BFShadowLODComponent numLevels="1" switchingDists="60.0" />
+					<BFSecondaryAnimComponent animName="Secondary_Swim" frequency="1" chance="100" validAnims="Swim_2TreadWater,Swim_Ahead,Swim_Bite,Swim_TurnLeftA,Swim_TurnRightA,TreadWater_2Swim,TreadWater_Bite,TreadWater_Idle,TreadWater_Lunge,TreadWater_TurnLeft90,TreadWater_TurnRight90" />
+					<BFActorComponent actorfile="entities/units/animals/Ghost/Ghost_Adult_F.bfm" scale="0.50" />
+					<BF4LegsGroundFitComponent heightOffset="0" maxRollError="0.2" maxPitchError="0.1" maxHeightError="0.5" pitchGain="2.00" heightGain="6.0" rollGain="1.0" bicyclePointBack="Bip01 Pelvis" bicyclePointFront="Bip01 Neck"  backBuoyancyNode="BuoyBack" frontBuoyancyNode="BuoyFront"/>
+					<BFForwardMovingComponent />
+					<BFRotYawMovingComponent />
+					<BFCollisionComponent grid="Bip01 Spine" />
+					<BFGridCollisionComponent />
+					<BFSwimComponent waterInDistance="0" waterOutDistance="0" />
+				</BFPhysObj>
+         </instance>
+         <shared>
+            <BFTextTagMacrosComponent>
+               <MACROS>
+                  <macro name="JumpOnHeatedRock" text="anim 'Run_Ahead' !anim 'Stand_Idle' blend .2 advance_cur_t, anim 'Stand_Idle'"/>
+                  <macro name="JumpOnRock" text="as 100 1, anim 'Stand_JumpUp'"/>
+                  <macro name="TurnLeft180" text="!anim 'Stand_Idle' blend .2 advance_cur_t, anim 'Stand_TurnLeft90', anim 'Stand_TurnLeft90'"/>
+                  <macro name="TurnRight180" text="!anim 'Stand_Idle' blend .2 advance_cur_t, anim 'Stand_TurnRight180'"/>
+                  <macro name="TurnRight90" text="anim 'Stand_TurnRight90'"/>
+                  <macro name="TurnLeft90" text="anim 'Stand_TurnLeft90'"/>
+                  <macro name="Walky" text="anim 'Walk_Ahead'"/>
+                  <macro name="Stand2LieBelly" text="anim 'Stand_2Lie'"/>
+                  <macro name="LieBelly2Stand" text="anim 'Lie_2Stand', anim 'Stand_Idle'"/>
+                  <macro name="Standy2Walky" text="anim 'Stand_2Walk', anim 'Walk_Ahead'"/>
+                  <macro name="Walky2Standy" text="anim 'Walk_2Stand', anim 'Stand_Idle'"/>
+                  <macro name="RedPandaWalk" text="anim 'Walk_Ahead'"/>
+                  <macro name="RedPandaClimb180" text="anim 'Stand_TurnRight90', anim 'Stand_TurnRight90'"/>
+                  <macro name="RedPandaCurl" text="anim 'Stand_Idle'"/>
+                  <macro name="RedPandaCurl2Descend" text="anim 'Stand_2Walk', anim 'Walk_Ahead'"/>
+                  <macro name="UsePool" text="anim 'Stand_2Lie'"/>
+				  <macro name="ClimbElephantEar" text="!anim 'Climb_Idle' blend 0.5 advance_cur_t, dis, exit"/>
+				  <macro name="ClimbBananaTree" text="!anim 'Climb_Idle' blend .3 advance_cur_t, anim 'Climb_Idle', dis, exit"/>
+				  <macro name="ClimbKily" text="!anim 'Climb_Idle' blend .2 advance_cur_t, anim 'Climb_Up', exit"/>
+				  <macro name="ClimbAcacia" text="!anim 'Climb_Idle' blend .3 advance_cur_t, dis, exit"/>
+				  <macro name="ClimbTreeFernA" text="!anim 'Climb_Idle' blend .3 advance_cur_t, dis, Climb2Walk, exit"/>
+				  <macro name="ClimbThing" text="anim 'Walk_2Climb', anim 'Climb_Up', anim 'Climb_Up'" />
+				  <macro name="ClimbDown" text="anim 'Climb_Down', anim 'Climb_Down', anim 'Climb_Down'" />
+				  <macro name="Climb2Walk" text="anim 'Climb_2Walk'" />
+               </MACROS>
+            </BFTextTagMacrosComponent>
+			<BFSharedPhysVars isWaterDisplacer="false" floorNode="Floor" splashScale="0.3">
+				<virtualNodes>
+					<Dock_Fence y="-2.25" />
+					<Dock_FoodDish y="-1.10" />
+					<Dock_BeefShank y="-1.4" />
+					<Dock_IceBlock y="-1.55" />
+					<Dock_Guest x="3.0" />
+					<Dock_SailGuest x="0.5" y="-0.25" yaw="90"/>
+				</virtualNodes>
+			</BFSharedPhysVars>
+			<BFSharedRandomTextureInfo>
+				<replacementSet>
+					<group weight=".25">
+						<item material="Ghost_Adult_F" image="entities/units/animals/Ghost/Ghost_Adult_F.dds" layer="base" />
+					</group>
+					<group weight=".25">
+						<item material="Ghost_Adult_F" image="entities/units/animals/Ghost/Ghost_Adult_F_1.dds" layer="base" />
+					</group>
+					<group weight=".22">
+						<item material="Ghost_Adult_F" image="entities/units/animals/Ghost/Ghost_Adult_F_2.dds" layer="base" />
+					</group>
+                                        <group weight=".18">
+						<item material="Ghost_Adult_F" image="entities/units/animals/Ghost/Ghost_Adult_F_3.dds" layer="base" />
+					</group>
+					<group weight=".10">
+						<item material="Ghost_Adult_F" image="entities/units/animals/Ghost/Ghost_Adult_F_4.dds" layer="base" />
+					</group>
+				</replacementSet>
+			</BFSharedRandomTextureInfo>
+         </shared>
+      </BFNamedBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFBehaviorMgr behaviorVersion="1">
+               <subBehaviors>
+                  <BFBehLocoSwitchSet loopFlag="true">
+                     <behaviorTable>
+                        <ground behSet="Stand_Idle"/>
+                        <water behSet="TreadWater_Idle"/>
+                     </behaviorTable>
+                  </BFBehLocoSwitchSet>
+               </subBehaviors>
+            </BFBehaviorMgr>
+         </instance>
+      </BFBinder>
+      <BFBinder required="1">
+         <instance>
+            <BFLocomotionMgr/>
+         </instance>
+         <binder>
+            <BFNamedBinder binderName="ground" required="1">
+               <instance>
+                  <BFLocoAnimate version="1" stationaryAnim="Stand_Idle">
+                     <stop name="Stand"/>
+                     <slow name="Walk"/>
+                     <medium name="Run"/>
+                     <fast name="Run"/>
+                     <stalk name="Walk"/>
+                     <evade name="Run" minAnimSpeed="0.6" maxAnimSpeed="1.5"/>
+                  </BFLocoAnimate>
+               </instance>
+            </BFNamedBinder>
+            <BFNamedBinder binderName="water" required="1">
+               <instance>
+                  <BFLocoAnimate version="1" stationaryAnim="TreadWater_Idle">
+                     <stop name="TreadWater"/>
+                     <slow name="Swim"/>
+                     <medium name="Swim"/>
+                     <fast name="Swim"/>
+                     <stalk name="Swim"/>
+                     <evade name="Swim" minAnimSpeed="0.6" maxAnimSpeed="1.5"/>
+                  </BFLocoAnimate>
+               </instance>
+            </BFNamedBinder>
+         </binder>
+      </BFBinder>
+      <BFNamedBinder binderName="foodprop" repopulateMethod="byName" required="1">
+         <instance>
+            <BFGEntityContainer>
+               <slots>
+                  <BFGEntityContainerSlot ownContents="false" hideContents="false" capacity="1"/>
+               </slots>
+            </BFGEntityContainer>
+         </instance>
+      </BFNamedBinder>
+      <BFBinder>
+         <instance>
+            <ZTEconomyComponent cost="1250">
+               <ZTTransaction name="build" costType="parent" type="debit" category="animal"/>
+            </ZTEconomyComponent>
+         </instance>
+      </BFBinder>
+   </binder>
+</BFTypedBinder>

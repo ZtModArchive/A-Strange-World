@@ -1,0 +1,237 @@
+<BFTypedBinder abstract="true" binderType="SquidPajama">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Actinopterygii>
+						<Perciformes>
+							<Istiophoridae>
+								<SquidPajama />
+							</Istiophoridae>
+						</Perciformes>
+					</Actinopterygii>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity />
+	</instance>
+	<shared>
+		<UIToggleButton template="adopt">
+			<UIHelpInfo ids="entityname:SquidPajama" />
+			<on>
+				<event data="BFString" msg="ZT_SETPLACEMENTOBJECT" string="SquidPajama_Adult_F" />
+			</on>
+			<UIAspect>
+				<default image="entities/units/animals/SquidPajama/SquidPajama_Adult_F_icon.dds" />
+			</UIAspect>
+		</UIToggleButton>
+		<ZTPlacementData icon3Doffset="0 .01 .87" icon3Dscale="1.5" iconAnim="Swim_Ahead" minimumDepth="0" />
+		<BFAIEntityDataShared b_Ambivore="false" b_Basic="true" b_BerriesEater="false" b_Cancrivorous="false" b_Carnivore="false" b_Crustacivore="false" b_ElevatedFoodDishEater="false" b_EucalyptusEater="false" b_Folivore="false" b_FoodDishEater="false" b_Frugivore="false" b_Fucivore="false" b_Graminivore="false" b_Granivore="false" b_HoneyEater="false" b_Insectivore="false" b_JellyfishEater="false" b_MarineAnimal="true" b_MarineCarnivore="false" b_MarinePiscivore="false" b_MediumAnimal="true" b_MetalTroughEater="false" b_PelagicAnimal="true" b_PirateShipUser="true" b_Piscivore="false" b_Planktivore="false" b_Prey="true" b_Radicivore="false" b_SmoothSteering="true" b_SquidEater="false" b_SubstratePileEater="false" b_TermiteMoundUser="false" b_TroughEater="false" b_UpdateSteeringEveryFrame="true" f_BaseDonationAmount="60" f_MaxTourValue="20" f_RequiredAdditionalTankSpace="0" f_RequiredInitialTankSpace="0" f_RequiredTankDepth="0" f_adoptRarity="1" f_forwardSteeringMargin="20" f_maxSteeringForceChangeRate="180" p_FightOffset="0 -1.5 180" p_PredatorOffset="0 -2 0" p_PreyOffset="0 -1.5 0" p_SniffNode="0 -3.5 180" s_DonateToken="t_DonateSquidPajama" s_Endangerment="LowRisk" s_KeeperEatType="BuoyLure_Fish" s_Product="MM" s_Species="SquidPajama" s_Zoopedia="zoopedia:zoopedia_SquidPajama:entry">
+			<BFAINeedAdjusts exercise="0" hunger="-100" privacy="-100" rest="0.05" social="-100" stimulation="-100" thirst="-100" />
+		</BFAIEntityDataShared>
+		<BFGBiomeData location="reef_indian_pacific_oceans" locationSensitivity="10">
+			<alpine sensitivity="4" />
+			<benthic sensitivity="4" />
+			<borealforest sensitivity="4" />
+			<coastal sensitivity="4" />
+			<desert sensitivity="4" />
+			<grassland sensitivity="4" />
+			<reef primary="true" sensitivity="10" />
+			<pelagic sensitivity="4" />
+			<temperateforest sensitivity="4" />
+			<tropicalrainforest sensitivity="4" />
+			<tundra sensitivity="4" />
+			<savannah sensitivity="4" />
+			<scrub sensitivity="4" />
+			<wetlands sensitivity="4" />
+		</BFGBiomeData>
+		<ZTUserStaffAction>
+			<SetAttribute effect="SuperStaffWashLarge" locid="superstaff:animal_groom" name="hygiene" node="Scene Root" threshold="20" value="0" />
+			<SetAttribute effect="SuperStaffHealMarine" locid="superstaff:animal_heal" name="health" node="Scene Root" threshold="20" value="0" />
+		</ZTUserStaffAction>
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFActorComponent actorfile="entities/units/animals/SquidPajama/SquidPajama_Adult_F.bfm" scale="0.7" switch="0 15 30 60" />
+					<BFShadowLODComponent numLevels="1" switchingDists="60.0" />
+					<BF2LegsGroundFitComponent allowRollOnWater="true" autoHeightOffset="false" fitRadius=".15" frontBuoyancyNode="Node_Buoy" heightOffset="0.23" seabedOffset="1" surfacingDepth="0.5" />
+					<BFSwimComponent waterInDistance="0.50" waterOutDistance="0.1" />
+					<BFRotYawMovingComponent />
+					<BFSpineBendComponent bendDegree="89" bendTime="0.5" spineBase="Bip01 Spine" spineBone1="Bip01 Spine1" tailBone1="Bip01 Tail" tailBone2="Bip01 Tail1" tailBone3="Bip01 Tail2" />
+					<BFCollisionComponent grid="Bip01" />
+					<BFGridCollisionComponent />
+				</BFPhysObj>
+			</instance>
+			<shared>
+				<BFSharedPhysVars floorNode="Floor" isWaterDisplacer="true" splashScale="0.2" waterDisplacement="0.25 0.5 0.25">
+					<virtualNodes>
+						<Node_Floor pitch="0" roll="0" x="0" y="-2" yaw="0" z="-.25" />
+					</virtualNodes>
+				</BFSharedPhysVars>
+				<BFSharedRandomTextureInfo>
+					<replacementSet>
+						<group weight="1">
+							<item image="entities/units/animals/SquidPajama/SquidPajama_Adult_F.dds" material="SquidPajama_Adult_F" />
+						</group>
+					</replacementSet>
+				</BFSharedRandomTextureInfo>
+			</shared>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFGCollisionHandler factorStepDown="0.01" />
+			</instance>
+		</BFBinder>
+		<BFBinder>
+			<instance>
+				<BFAICognitiveMgr>
+					<StateThinkers>
+						<ZTAIStateThinker>
+							<BFAIStateVar Name="thirst" ValueMax="0" ValueMin="0" />
+						</ZTAIStateThinker>
+					</StateThinkers>
+				</BFAICognitiveMgr>
+			</instance>
+		</BFBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFBehaviorMgr behaviorVersion="1">
+					<subBehaviors>
+						<BFBehLocoSwitchSet loopFlag="true">
+							<behaviorTaSquidPajama>
+								<ground behSet="Stand_Idle" />
+								<water behSet="TreadWater_Idle" />
+							</behaviorTaSquidPajama>
+						</BFBehLocoSwitchSet>
+					</subBehaviors>
+				</BFBehaviorMgr>
+			</instance>
+		</BFBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFLocomotionMgr />
+			</instance>
+			<binder>
+				<BFNamedBinder binderName="ground" required="1">
+					<instance>
+						<BFLocoAnimate version="1">
+							<stop name="OnLand" />
+							<slow name="OnLand" />
+							<medium name="OnLand" />
+							<fast name="OnLand" />
+							<evade name="OnLand" />
+							<stalk name="OnLand" />
+							<attack name="OnLand" />
+							<glide name="OnLand" />
+							<bolt name="OnLand" />
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+				<BFNamedBinder binderName="water" required="1">
+					<instance>
+						<BFLocoAnimate version="1">
+							<stop name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</stop>
+							<slow maxAnimSpeed="1.0" maxResetPeriod="6" minAnimSpeed="0.75" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</slow>
+							<medium maxAnimSpeed="1.1" maxResetPeriod="6" minAnimSpeed="0.85" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</medium>
+							<fast maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</fast>
+							<evade maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</evade>
+							<stalk maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</stalk>
+							<attack maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="Swim">
+								<anim name="Swim_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2Swim" yaw="1.0" />
+							</attack>
+							<glide flapAnim="Swim_2SwimGlide" maxAnimSpeed="1.5" maxResetPeriod="6" minAnimSpeed="0.5" minResetPeriod="4" name="SwimGlide">
+								<anim acceleration="-0.1" name="SwimGlide_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimGlide" roll="0.5" yaw="1.0" />
+							</glide>
+							<bolt maxAnimSpeed="1.0" maxResetPeriod="6" minAnimSpeed="0.75" minResetPeriod="4" name="Charge">
+								<anim name="Charge_Ahead" roll="0.5" yaw="1.0" />
+								<anim name="ChargeSub_2Charge" yaw="1.0" />
+							</bolt>
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+				<BFNamedBinder binderName="underwater" required="1">
+					<instance>
+						<BFLocoAnimate version="1">
+							<stop name="SwimSub">
+								<anim name="SwimSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</stop>
+							<slow maxAnimSpeed="1.0" maxResetPeriod="6" minAnimSpeed="0.75" minResetPeriod="4" name="SwimSub">
+								<anim name="SwimSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</slow>
+							<medium maxAnimSpeed="1.1" maxResetPeriod="6" minAnimSpeed="0.85" minResetPeriod="4" name="SwimSub">
+								<anim name="SwimSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</medium>
+							<fast maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="SwimSub">
+								<anim name="SwimSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</fast>
+							<evade maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="SwimSub">
+								<anim name="SwimSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</evade>
+							<stalk maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="Stalk">
+								<anim name="Stalk_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2Stalk" pitch="0.5" yaw="1.0" />
+							</stalk>
+							<attack flapAnim="SwimSub_SlashFrenzy" maxAnimSpeed="1.2" maxResetPeriod="6" minAnimSpeed="0.95" minResetPeriod="4" name="SwimSub">
+								<anim name="SwimSub_SlashFrenzy" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Swim_2SwimSub" pitch="0.5" yaw="1.0" />
+							</attack>
+							<glide flapAnim="SwimSub_2SwimSubGlide" maxAnimSpeed="1.5" maxResetPeriod="6" minAnimSpeed="0.5" minResetPeriod="4" name="SwimSubGlide">
+								<anim acceleration="-0.1" name="SwimSubGlide_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="SwimSub_2SwimSubGlide" pitch="0.5" yaw="1.0" />
+							</glide>
+							<bolt maxAnimSpeed="1.0" maxResetPeriod="6" minAnimSpeed="0.75" minResetPeriod="4" name="Charge">
+								<anim name="ChargeSub_Ahead" pitch="0.5" roll="0.5" yaw="1.0" />
+								<anim name="Charge_2ChargeSub" pitch="0.5" yaw="1.0" />
+							</bolt>
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+			</binder>
+		</BFBinder>
+		<BFNamedBinder binderName="foodprop" repopulateMethod="byName" required="1">
+			<instance>
+				<BFGEntityContainer>
+					<slots>
+						<BFGEntityContainerSlot SquidPajamaacity="1" hideContents="false" ownContents="false" />
+					</slots>
+				</BFGEntityContainer>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder>
+			<instance>
+				<ZTEconomyComponent cost="300">
+					<ZTTransaction category="animal" costType="parent" name="build" type="debit" />
+				</ZTEconomyComponent>
+			</instance>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>

@@ -1,0 +1,141 @@
+<BFTypedBinder abstract="true" binderType="caecilianchorla_Young">
+	<types>
+		<entity>
+			<actor>
+				<animal>
+					<Reptilia>
+						<Squamata>
+							<Varanidae>
+								<caecilianchorla>
+									<caecilianchorla_Young />
+								</caecilianchorla>
+							</Varanidae>
+						</Squamata>
+					</Reptilia>
+				</animal>
+			</actor>
+		</entity>
+	</types>
+	<instance>
+		<BFGEntity entityVersion="1">
+			<physObjParenting>
+				<parentObj attachnode="link" child="shadowObj" parent="mainObj" postype="ignore" rottype="use" />
+				<parentObj attachnode="link" child="shadowObj2" parent="mainObj" postype="ignore" rottype="use" />
+				<parentObj attachnode="link" child="shadowObj3" parent="mainObj" postype="ignore" rottype="use" />
+			</physObjParenting>
+		</BFGEntity>
+	</instance>
+	<shared>
+		<ZTDevComponent />
+		<BFAIEntityDataShared b_Adult="0" b_HeatedRockUser="false" f_LocoSearchHorizon="25" f_MorphMessageDuration="30" f_MorphMessagePriority="1" f_viewBonus="5" p_PredatorOffset="0 -2 0" p_PreyOffset="0 1 0" s_MorphMessage="zoomessages:AnimalHatchEgg">
+			<BFAINeedAdjusts exercise="0.33" health="0.25" reproduction="0" stimulation="0.33" />
+		</BFAIEntityDataShared>
+	</shared>
+	<binder>
+		<BFNamedBinder binderName="shadowObj">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Bip01 Spine2" intensity="0.3" length="0.7" shadowTexture="world\shadows\blob\round_blob3.tga" width="0.1" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="shadowObj2">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Bip01 Head" intensity="0.25" length="0.5" lodLevel="0" offlength="-0.25" shadowTexture="world\shadows\blob\round_blob3.tga" width="0.2" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="shadowObj3">
+			<instance>
+				<BFPhysObj>
+					<BFMovingBlobShadowComponent baseNode="Bip01 Tail" intensity="0.25" length="0.6" lodLevel="0" offlength="0.25" shadowTexture="world\shadows\blob\round_blob3.tga" width="0.2" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFNamedBinder binderName="mainObj">
+			<instance>
+				<BFPhysObj>
+					<BFActorComponent actorfile="entities/units/animals/caecilianchorla/caecilianchorla_Adult_F.bfm" scale="0.1" />
+				</BFPhysObj>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFGCollisionTester escapeBuffer="0.1875" landScore="0" maxSlope=".50" motionClass="swimmer" radius=".375" waterScore="0" />
+			</instance>
+		</BFBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFAICognitiveMgr>
+					<Sensors>
+						<ZTAISensor />
+						<BFAISensorSelf />
+						<ZTAISensorLand />
+						<ZTAISensorTA sensorTag="habitat" />
+					</Sensors>
+					<StateThinkers>
+						<ZTAIStateThinker mergeKey="Name">
+							<BFAIStateVar Advanced="true" CessationThreshold="90" CriticalThreshold="90" Name="reproduction" TriggerThreshold="90" Value="" ValueMax="0" ValueMin="0" />
+						</ZTAIStateThinker>
+					</StateThinkers>
+					<TaskThinkers>
+						<ZTAITaskThinker />
+					</TaskThinkers>
+				</BFAICognitiveMgr>
+			</instance>
+			<shared>
+				<BFAICogShared>
+					<BFAINoPerceive>
+						<fence />
+						<path />
+						<entrance />
+					</BFAINoPerceive>
+				</BFAICogShared>
+			</shared>
+		</BFBinder>
+		<BFNamedBinder binderName="checkup" required="1">
+			<instance>
+				<ZTAIStaffRequestController attribName="health" cancelTestType="1" cancelThresholdValue="20" testType="4" thresholdValue="30">
+					<ZTStaffRequestData priority="5" subjectType="Keeper" tokenKey="t_CheckupBaby" />
+				</ZTAIStaffRequestController>
+			</instance>
+		</BFNamedBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFAIEntityDataInstance f_needPointsGood="50" />
+			</instance>
+		</BFBinder>
+		<BFBinder required="1">
+			<instance>
+				<BFLocomotionMgr />
+			</instance>
+			<binder>
+				<BFNamedBinder binderName="ground" required="1">
+					<instance>
+						<BFLocoAnimate stationaryAnim="Stand_Idle" version="1">
+							<stop maxAnimSpeed="3.5" minAnimSpeed="3" name="Stand" />
+							<slow maxAnimSpeed="3.5" minAnimSpeed="3" name="Walk" />
+							<medium maxAnimSpeed="4.0" minAnimSpeed="3.5" name="Walk" />
+							<fast maxAnimSpeed="4.0" minAnimSpeed="3.5" name="Run" />
+							<stalk maxAnimSpeed="3.5" minAnimSpeed="3" name="Stalk" />
+							<evade maxAnimSpeed="4.5" minAnimSpeed="3.5" name="Run" />
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+				<BFNamedBinder binderName="water" required="1">
+					<instance>
+						<BFLocoAnimate stationaryAnim="Stand_Idle" version="1">
+							<stop maxAnimSpeed="3.5" minAnimSpeed="3.3" name="Stand" />
+							<slow maxAnimSpeed="3.5" minAnimSpeed="3.3" name="Walk" />
+							<medium maxAnimSpeed="3.5" minAnimSpeed="3.3" name="Walk" />
+							<fast maxAnimSpeed="3.5" minAnimSpeed="3.3" name="Walk" />
+							<stalk maxAnimSpeed="3.5" minAnimSpeed="3.3" name="Walk" />
+							<evade maxAnimSpeed="3.8" minAnimSpeed="3.0" name="Walk" />
+						</BFLocoAnimate>
+					</instance>
+				</BFNamedBinder>
+			</binder>
+		</BFBinder>
+	</binder>
+</BFTypedBinder>
